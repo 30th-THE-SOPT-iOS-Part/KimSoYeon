@@ -56,10 +56,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huree" translatesAutoresizingMaskIntoConstraints="NO" id="hQD-zy-fn9">
-                                <rect key="frame" x="57" y="276" width="300" height="300"/>
+                                <rect key="frame" x="107" y="276" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1Ht-sa-Qmk"/>
-                                    <constraint firstAttribute="width" constant="300" id="BiU-BH-fDc"/>
+                                    <constraint firstAttribute="height" constant="200" id="1Ht-sa-Qmk"/>
+                                    <constraint firstAttribute="width" constant="200" id="BiU-BH-fDc"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -286,7 +286,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="huree" width="580" height="580"/>
+        <image name="huree" width="421" height="421"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
