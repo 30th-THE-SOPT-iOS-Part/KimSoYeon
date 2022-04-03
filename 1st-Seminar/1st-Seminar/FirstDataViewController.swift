@@ -24,7 +24,10 @@ final class FirstDataViewController: UIViewController {
     
     @IBAction func touchUpNextButton(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondDataViewController") as? SecondDataViewController else { return }
-        nextVC.message = dataTextField.text
+        
+        guard let text = dataTextField.text else { return }
+        nextVC.message = text
+        
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }
