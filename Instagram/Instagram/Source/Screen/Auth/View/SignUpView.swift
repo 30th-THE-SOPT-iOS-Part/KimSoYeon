@@ -38,6 +38,7 @@ final class SignUpView: UIView {
     
     private var textField = IDSTextField().then {
         $0.addLeftPadding()
+        $0.clearButtonMode = .whileEditing
     }
     
     private var nextButton = IDSButton().then {
