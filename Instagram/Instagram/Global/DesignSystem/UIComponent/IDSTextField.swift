@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class IDSTextField: UITextField {
+final class IDSTextField: UITextField {
     
     // MARK: - Properties
     
@@ -30,10 +30,12 @@ class IDSTextField: UITextField {
     // MARK: - Init UI
     
     private func configUI() {
-        layer.cornerRadius = 30
+        layer.cornerRadius = 3
         layer.masksToBounds = true
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.systemGray5.cgColor
         font = IDSFont.body1
-        backgroundColor = .white
+        backgroundColor = .systemGray6
     }
     
     // MARK: - Custom Method
