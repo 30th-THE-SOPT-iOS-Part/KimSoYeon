@@ -32,7 +32,7 @@
 		921E578327FADC6600CDC913 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578227FADC6600CDC913 /* AuthModel.swift */; };
 		921E578827FADCFA00CDC913 /* HomeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578727FADCFA00CDC913 /* HomeMainModel.swift */; };
 		921E578A27FADD0300CDC913 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578927FADD0300CDC913 /* HomeMainView.swift */; };
-		921E578C27FADD6A00CDC913 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578B27FADD6A00CDC913 /* SignUpViewController.swift */; };
+		921E578C27FADD6A00CDC913 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578B27FADD6A00CDC913 /* UserNameViewController.swift */; };
 		921E578E27FADD8E00CDC913 /* AuthCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578D27FADD8E00CDC913 /* AuthCompleteViewController.swift */; };
 		921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578F27FADF7B00CDC913 /* SignUpView.swift */; };
 		921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */; };
@@ -42,6 +42,8 @@
 		921E579A27FAE73F00CDC913 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 921E579927FAE73F00CDC913 /* swiftgen.yml */; };
 		921E579E27FAE81E00CDC913 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921E579D27FAE81E00CDC913 /* Colors.xcassets */; };
 		92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */; };
+		92920C7727FAF71C00DCABC7 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7627FAF71C00DCABC7 /* Reactive+.swift */; };
+		92920C7927FAFE6800DCABC7 /* UserPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7827FAFE6800DCABC7 /* UserPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +75,7 @@
 		921E578227FADC6600CDC913 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		921E578727FADCFA00CDC913 /* HomeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainModel.swift; sourceTree = "<group>"; };
 		921E578927FADD0300CDC913 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
-		921E578B27FADD6A00CDC913 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		921E578B27FADD6A00CDC913 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		921E578D27FADD8E00CDC913 /* AuthCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCompleteViewController.swift; sourceTree = "<group>"; };
 		921E578F27FADF7B00CDC913 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSNavigationBar.swift; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		921E579927FAE73F00CDC913 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		921E579D27FAE81E00CDC913 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		92920C7627FAF71C00DCABC7 /* Reactive+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
+		92920C7827FAFE6800DCABC7 /* UserPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPasswordViewController.swift; sourceTree = "<group>"; };
 		DB41544B785A02F968ACF11F /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +195,7 @@
 			children = (
 				921E575427FAD0EE00CDC913 /* UIView+.swift */,
 				921E575627FAD11800CDC913 /* UIViewController+.swift */,
+				92920C7627FAF71C00DCABC7 /* Reactive+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -329,7 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				921E577A27FADC2E00CDC913 /* SignInViewController.swift */,
-				921E578B27FADD6A00CDC913 /* SignUpViewController.swift */,
+				921E578B27FADD6A00CDC913 /* UserNameViewController.swift */,
+				92920C7827FAFE6800DCABC7 /* UserPasswordViewController.swift */,
 				921E578D27FADD8E00CDC913 /* AuthCompleteViewController.swift */,
 			);
 			path = Controller;
@@ -510,7 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				921E578C27FADD6A00CDC913 /* SignUpViewController.swift in Sources */,
+				921E578C27FADD6A00CDC913 /* UserNameViewController.swift in Sources */,
 				921E578A27FADD0300CDC913 /* HomeMainView.swift in Sources */,
 				921E577427FADADC00CDC913 /* MoyaLoggingPlugin.swift in Sources */,
 				921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */,
@@ -521,6 +527,7 @@
 				921E577627FADB1A00CDC913 /* BaseTargetType.swift in Sources */,
 				921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */,
 				921E576827FADA4C00CDC913 /* TempAPI.swift in Sources */,
+				92920C7927FAFE6800DCABC7 /* UserPasswordViewController.swift in Sources */,
 				921E576C27FADA5F00CDC913 /* TempService.swift in Sources */,
 				921E573F27FACB1A00CDC913 /* HomeMainViewController.swift in Sources */,
 				921E575727FAD11800CDC913 /* UIViewController+.swift in Sources */,
@@ -530,6 +537,7 @@
 				921E577B27FADC2E00CDC913 /* SignInViewController.swift in Sources */,
 				921E576A27FADA5700CDC913 /* TempDataModel.swift in Sources */,
 				921E578E27FADD8E00CDC913 /* AuthCompleteViewController.swift in Sources */,
+				92920C7727FAF71C00DCABC7 /* Reactive+.swift in Sources */,
 				921E578827FADCFA00CDC913 /* HomeMainModel.swift in Sources */,
 				921E573D27FACB1A00CDC913 /* SceneDelegate.swift in Sources */,
 				921E575C27FAD1DF00CDC913 /* IDSFont.swift in Sources */,
