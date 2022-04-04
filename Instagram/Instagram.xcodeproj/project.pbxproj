@@ -38,6 +38,7 @@
 		921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */; };
 		921E579427FAE2BA00CDC913 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579327FAE2BA00CDC913 /* BackButton.swift */; };
 		921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579527FAE33C00CDC913 /* CloseButton.swift */; };
+		921E579827FAE4C900CDC913 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579727FAE4C900CDC913 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSNavigationBar.swift; sourceTree = "<group>"; };
 		921E579327FAE2BA00CDC913 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		921E579527FAE33C00CDC913 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		921E579727FAE4C900CDC913 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		DB41544B785A02F968ACF11F /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				921E578027FADC5B00CDC913 /* AuthCompleteView.swift */,
+				921E579727FAE4C900CDC913 /* SignInView.swift */,
 				921E578F27FADF7B00CDC913 /* SignUpView.swift */,
 			);
 			path = View;
@@ -492,6 +495,7 @@
 				921E578827FADCFA00CDC913 /* HomeMainModel.swift in Sources */,
 				921E573D27FACB1A00CDC913 /* SceneDelegate.swift in Sources */,
 				921E575C27FAD1DF00CDC913 /* IDSFont.swift in Sources */,
+				921E579827FAE4C900CDC913 /* SignInView.swift in Sources */,
 				921E576027FAD3AA00CDC913 /* IDSButton.swift in Sources */,
 				921E575E27FAD25300CDC913 /* IDSTextField.swift in Sources */,
 				921E577027FADA8900CDC913 /* GeneralAPI.swift in Sources */,
