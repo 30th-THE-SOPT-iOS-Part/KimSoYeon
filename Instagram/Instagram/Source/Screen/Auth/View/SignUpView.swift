@@ -69,12 +69,19 @@ final class SignUpView: UIView {
         }
     }
     
+    var isSecureTextEntry: Bool = false {
+        didSet {
+            textField.isSecureTextEntry = isSecureTextEntry
+        }
+    }
+    
     // MARK: - Initializer
     
     init() {
         super.init(frame: .zero)
         configUI()
         setLayout()
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -109,5 +116,19 @@ final class SignUpView: UIView {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
+    }
+    
+    private func bind() {
+        textField.delegate = self
+    }
+}
+
+extension SignUpView: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        textField.hasText ? (nextButton.isActivated = true) : (nextButton.isActivated = false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
     }
 }

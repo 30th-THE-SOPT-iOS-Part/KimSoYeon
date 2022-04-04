@@ -41,6 +41,8 @@ final class UserPasswordViewController: UIViewController {
     
     private func configUI() {
         view.backgroundColor = .white
+        
+        rootView.isSecureTextEntry = true
     }
     
     private func setLayout() {
@@ -60,9 +62,6 @@ final class UserPasswordViewController: UIViewController {
     // MARK: - Custom Method
     
     private func bind() {
-        // TODO: REMOVE
-        rootView.isFilled = true
-        
         rootView.tapNextObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in

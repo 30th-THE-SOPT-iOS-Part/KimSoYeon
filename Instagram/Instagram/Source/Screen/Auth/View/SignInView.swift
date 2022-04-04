@@ -40,6 +40,7 @@ final class SignInView: UIView {
     }
     private var pwTextField = IDSTextField().then {
         $0.setPlaceholder(placeholder: "비밀번호")
+        $0.isSecureTextEntry = true
     }
     
     private var pwGuideButton = UIButton().then {
@@ -71,6 +72,7 @@ final class SignInView: UIView {
         super.init(frame: .zero)
         configUI()
         setLayout()
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -131,5 +133,24 @@ final class SignInView: UIView {
             $0.centerY.equalTo(guideLabel.snp.centerY)
             $0.leading.equalTo(guideLabel.snp.trailing).offset(7)
         }
+    }
+    
+    private func bind() {
+        idTextField.delegate = self
+        pwTextField.delegate = self
+    }
+}
+
+extension SignInView: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if idTextField.hasText && pwTextField.hasText {
+            loginButton.isActivated = true
+        } else {
+            loginButton.isActivated = false
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
     }
 }
