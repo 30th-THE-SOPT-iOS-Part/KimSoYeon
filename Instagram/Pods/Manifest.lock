@@ -4,19 +4,40 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - ReactorKit (3.1.0):
+    - RxSwift (~> 6.0)
+    - WeakMapTable (~> 1.1)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
+  - RxGesture (4.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxKeyboard (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
   - SnapKit (5.0.1)
   - SwiftGen (6.5.1)
   - Then (2.7.0)
+  - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
   - Moya (= 15.0.0)
+  - Moya/RxSwift (= 15.0.0)
+  - ReactorKit (= 3.1.0)
   - RxCocoa (= 6.2.0)
+  - RxGesture (= 4.0.2)
+  - RxKeyboard (= 2.0.0)
+  - RxOptional (= 5.0.2)
   - RxSwift (= 6.2.0)
   - SnapKit (= 5.0.1)
   - SwiftGen (~> 6.0)
@@ -26,23 +47,33 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - ReactorKit
     - RxCocoa
+    - RxGesture
+    - RxKeyboard
+    - RxOptional
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftGen
     - Then
+    - WeakMapTable
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  ReactorKit: a06dd2a5c9339287aedf3dc821cfab6347eca106
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
+  RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: a46193ae520284869208532eb1a29659ba104fa2
+PODFILE CHECKSUM: 9cebdff718aea97f27c508f757181b3a2f7f7137
 
 COCOAPODS: 1.11.2
