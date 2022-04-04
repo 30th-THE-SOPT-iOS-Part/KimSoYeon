@@ -31,7 +31,7 @@ final class BackButton: UIButton {
     // MARK: - Init UI
     
     private func configUI() {
-        setImage(UIImage(named: "btnBack"), for: .normal)
+        setImage(Asset.Assets.icnBack.image, for: .normal)
     }
     
     private func setupLayout() {

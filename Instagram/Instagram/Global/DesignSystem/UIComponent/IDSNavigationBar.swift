@@ -9,7 +9,7 @@ import Foundation
 
 import SnapKit
 
-final class TDSNavigationBar: UIView {
+final class IDSNavigationBar: UIView {
     
     // MARK: - Metric Enum
     

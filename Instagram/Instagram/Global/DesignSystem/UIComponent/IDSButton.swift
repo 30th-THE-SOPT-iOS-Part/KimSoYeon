@@ -31,6 +31,19 @@ final class IDSButton: UIButton {
         $0.isHidden = true
     }
     
+    var isActivated: Bool = false {
+        didSet {
+            self.backgroundColor = self.isActivated ? activatedBackgroundColor : normalBackgroundColor
+            self.setTitleColor(self.isActivated ? activatedFontColor : normalFontColor, for: .normal)
+            self.isEnabled = isActivated
+        }
+    }
+    
+    private var normalBackgroundColor: UIColor = .lightGray
+    private var normalFontColor: UIColor = .darkGray
+    
+    private var activatedBackgroundColor: UIColor = .systemBlue
+    private var activatedFontColor: UIColor = .white
     
     init() {
         super.init(frame: .zero)
@@ -47,20 +60,23 @@ final class IDSButton: UIButton {
     // MARK: - Init UI
     
     private func configUI() {
-        
+        layer.cornerRadius = 5
     }
     
     private func setLayout() {
-
+        
     }
     
     // MARK: - Custom Method
     
-    internal func setButtonColors(normalBgColor: UIColor,
+    internal func setButtonColors(normalBackgroundColor: UIColor,
                              normalFontColor: UIColor,
-                             activatedBgColor: UIColor,
+                                  activatedBackgroundColor: UIColor,
                              activatedFontColor: UIColor) {
-        
+        self.normalBackgroundColor = normalBackgroundColor
+        self.normalFontColor = normalFontColor
+        self.activatedBackgroundColor = activatedBackgroundColor
+        self.activatedFontColor = activatedFontColor
     }
     
     internal func setTitleWithStyle(title: String,
