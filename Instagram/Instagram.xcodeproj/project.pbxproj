@@ -15,7 +15,7 @@
 		921E574427FACB1C00CDC913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921E574327FACB1C00CDC913 /* Assets.xcassets */; };
 		921E574727FACB1C00CDC913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921E574527FACB1C00CDC913 /* LaunchScreen.storyboard */; };
 		921E575527FAD0EE00CDC913 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575427FAD0EE00CDC913 /* UIView+.swift */; };
-		921E575727FAD11800CDC913 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575627FAD11800CDC913 /* UIViewController+.swift */; };
+		921E575727FAD11800CDC913 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575627FAD11800CDC913 /* UITextField+.swift */; };
 		921E575C27FAD1DF00CDC913 /* IDSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575B27FAD1DF00CDC913 /* IDSFont.swift */; };
 		921E575E27FAD25300CDC913 /* IDSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575D27FAD25300CDC913 /* IDSTextField.swift */; };
 		921E576027FAD3AA00CDC913 /* IDSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E575F27FAD3AA00CDC913 /* IDSButton.swift */; };
@@ -58,7 +58,7 @@
 		921E574627FACB1C00CDC913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		921E574827FACB1C00CDC913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		921E575427FAD0EE00CDC913 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		921E575627FAD11800CDC913 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		921E575627FAD11800CDC913 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		921E575B27FAD1DF00CDC913 /* IDSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSFont.swift; sourceTree = "<group>"; };
 		921E575D27FAD25300CDC913 /* IDSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSTextField.swift; sourceTree = "<group>"; };
 		921E575F27FAD3AA00CDC913 /* IDSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSButton.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				921E575427FAD0EE00CDC913 /* UIView+.swift */,
-				921E575627FAD11800CDC913 /* UIViewController+.swift */,
+				921E575627FAD11800CDC913 /* UITextField+.swift */,
 				92920C7627FAF71C00DCABC7 /* Reactive+.swift */,
 			);
 			path = Extension;
@@ -530,7 +530,7 @@
 				92920C7927FAFE6800DCABC7 /* UserPasswordViewController.swift in Sources */,
 				921E576C27FADA5F00CDC913 /* TempService.swift in Sources */,
 				921E573F27FACB1A00CDC913 /* HomeMainViewController.swift in Sources */,
-				921E575727FAD11800CDC913 /* UIViewController+.swift in Sources */,
+				921E575727FAD11800CDC913 /* UITextField+.swift in Sources */,
 				921E578327FADC6600CDC913 /* AuthModel.swift in Sources */,
 				921E578127FADC5B00CDC913 /* AuthCompleteView.swift in Sources */,
 				921E573B27FACB1A00CDC913 /* AppDelegate.swift in Sources */,

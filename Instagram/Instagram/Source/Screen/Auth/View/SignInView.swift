@@ -26,6 +26,11 @@ final class SignInView: UIView {
                     .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
     }
     
+    var tapShowPassWordButtonObservable: Observable<Void> {
+        return showPassWordButton.rx.tapGestureRecognizedVoid()
+                    .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+    }
+    
     // MARK: - Properties
     
     private var logoImageView = UIImageView().then {
@@ -44,10 +49,17 @@ final class SignInView: UIView {
         $0.setPlaceholder(placeholder: "전화번호, 사용자 이름 또는 이메일")
         $0.clearButtonMode = .whileEditing
     }
+    
     private var pwTextField = IDSTextField().then {
         $0.setPlaceholder(placeholder: "비밀번호")
         $0.isSecureTextEntry = true
-        $0.clearButtonMode = .whileEditing
+    }
+    
+    private var showPassWordButton = UIButton().then {
+        $0.setTitle("", for: .selected)
+        $0.setTitle("", for: .normal)
+        $0.setImage(Asset.Assets.passwordShownEyeIcon.image, for: .selected)
+        $0.setImage(Asset.Assets.passwordHiddenEyeIcon.image, for: .normal)
     }
     
     private var pwGuideButton = UIButton().then {
@@ -74,6 +86,13 @@ final class SignInView: UIView {
     }
     
     var userName: String = ""
+    
+    var isSelected: Bool = true {
+        didSet {
+            showPassWordButton.isSelected = isSelected
+            showPassWordButton.isSelected ? (pwTextField.isSecureTextEntry = false) : (pwTextField.isSecureTextEntry = true)
+        }
+    }
     
     // MARK: - Initializer
     
@@ -108,6 +127,12 @@ final class SignInView: UIView {
         
         textFieldStackView.addArrangedSubview(idTextField)
         textFieldStackView.addArrangedSubview(pwTextField)
+        
+        pwTextField.addSubview(showPassWordButton)
+        showPassWordButton.snp.makeConstraints {
+            $0.top.bottom.trailing.equalToSuperview().inset(5)
+            $0.width.height.equalTo(20)
+        }
 
         logoImageView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).inset(30)

@@ -50,6 +50,13 @@ final class SignInViewController: UIViewController {
     // MARK: - Custom Method
     
     private func bind() {
+        rootView.tapShowPassWordButtonObservable
+            .withUnretained(self)
+            .subscribe(onNext: { (`self`, _ ) in
+                self.rootView.isSelected.toggle()
+            })
+            .disposed(by: disposeBag)
+        
         rootView.tapSignInObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
