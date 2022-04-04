@@ -7,10 +7,10 @@
 
 import UIKit
 
+import RxSwift
+
 import SnapKit
 import Then
-
-import RxSwift
 
 final class SignInViewController: UIViewController {
 
