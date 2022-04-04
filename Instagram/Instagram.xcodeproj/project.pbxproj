@@ -39,6 +39,9 @@
 		921E579427FAE2BA00CDC913 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579327FAE2BA00CDC913 /* BackButton.swift */; };
 		921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579527FAE33C00CDC913 /* CloseButton.swift */; };
 		921E579827FAE4C900CDC913 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579727FAE4C900CDC913 /* SignInView.swift */; };
+		921E579A27FAE73F00CDC913 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 921E579927FAE73F00CDC913 /* swiftgen.yml */; };
+		921E579E27FAE81E00CDC913 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921E579D27FAE81E00CDC913 /* Colors.xcassets */; };
+		92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		921E579327FAE2BA00CDC913 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		921E579527FAE33C00CDC913 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		921E579727FAE4C900CDC913 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		921E579927FAE73F00CDC913 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		921E579D27FAE81E00CDC913 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		DB41544B785A02F968ACF11F /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +128,7 @@
 		921E573927FACB1A00CDC913 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				921E579927FAE73F00CDC913 /* swiftgen.yml */,
 				921E574E27FACE4E00CDC913 /* Global */,
 				921E575127FAD02600CDC913 /* Network */,
 				921E575027FAD02000CDC913 /* Resource */,
@@ -133,6 +140,7 @@
 		921E574E27FACE4E00CDC913 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				921E579B27FAE78200CDC913 /* Constant */,
 				921E575827FAD18A00CDC913 /* DesignSystem */,
 				921E575327FAD0CA00CDC913 /* Extension */,
 			);
@@ -229,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				921E574327FACB1C00CDC913 /* Assets.xcassets */,
+				921E579D27FAE81E00CDC913 /* Colors.xcassets */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -350,6 +359,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		921E579B27FAE78200CDC913 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		FF974F9CEE94739839915902 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +383,7 @@
 			buildConfigurationList = 921E574B27FACB1C00CDC913 /* Build configuration list for PBXNativeTarget "Instagram" */;
 			buildPhases = (
 				1569C2DB3E0353C2E07E73A8 /* [CP] Check Pods Manifest.lock */,
+				921E579C27FAE79D00CDC913 /* ShellScript */,
 				921E573327FACB1A00CDC913 /* Sources */,
 				921E573427FACB1A00CDC913 /* Frameworks */,
 				921E573527FACB1A00CDC913 /* Resources */,
@@ -420,7 +438,9 @@
 			files = (
 				921E574727FACB1C00CDC913 /* LaunchScreen.storyboard in Resources */,
 				921E574427FACB1C00CDC913 /* Assets.xcassets in Resources */,
+				921E579E27FAE81E00CDC913 /* Colors.xcassets in Resources */,
 				921E574227FACB1A00CDC913 /* Main.storyboard in Resources */,
+				921E579A27FAE73F00CDC913 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +486,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		921E579C27FAE79D00CDC913 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -480,6 +517,7 @@
 				921E575527FAD0EE00CDC913 /* UIView+.swift in Sources */,
 				921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */,
 				921E576E27FADA7800CDC913 /* GeneralResponse.swift in Sources */,
+				92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */,
 				921E577627FADB1A00CDC913 /* BaseTargetType.swift in Sources */,
 				921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */,
 				921E576827FADA4C00CDC913 /* TempAPI.swift in Sources */,
