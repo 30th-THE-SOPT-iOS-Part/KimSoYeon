@@ -60,9 +60,6 @@ final class UserNameViewController: UIViewController {
     // MARK: - Custom Method
     
     private func bind() {
-        // TODO: REMOVE
-        rootView.isFilled = true
-        
         rootView.tapNextObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in

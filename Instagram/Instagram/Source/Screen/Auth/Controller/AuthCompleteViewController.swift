@@ -18,7 +18,7 @@ final class AuthCompleteViewController: UIViewController {
     
     private lazy var navigationBar = IDSNavigationBar(self,
                                                       view: .auth,
-                                                      backButtonIsHidden: false,
+                                                      backButtonIsHidden: true,
                                                       closeButtonIsHidden: true)
     
     private lazy var rootView = AuthCompleteView()
@@ -63,8 +63,10 @@ final class AuthCompleteViewController: UIViewController {
         rootView.tapCompleteObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
-                let dvc = MainViewController()
-                self.navigationController?.pushViewController(dvc, animated: true)
+                guard let parentVC = self.presentingViewController as? UINavigationController else { return }
+                self.dismiss(animated: true) {
+                    parentVC.popToRootViewController(animated: true)
+                }
             })
             .disposed(by: disposeBag)
     }
