@@ -75,6 +75,8 @@ final class SignUpView: UIView {
         }
     }
     
+    var textData: String = ""
+    
     // MARK: - Initializer
     
     init() {
@@ -125,7 +127,13 @@ final class SignUpView: UIView {
 
 extension SignUpView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        textField.hasText ? (nextButton.isActivated = true) : (nextButton.isActivated = false)
+        if textField.hasText {
+            nextButton.isActivated = true
+            guard let text = textField.text else { return }
+            textData = text
+        } else {
+            nextButton.isActivated = false
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -14,6 +14,8 @@ import Then
 
 final class AuthCompleteViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var disposeBag = DisposeBag()
     
     private lazy var navigationBar = IDSNavigationBar(self,
@@ -22,6 +24,12 @@ final class AuthCompleteViewController: UIViewController {
                                                       closeButtonIsHidden: true)
     
     private lazy var rootView = AuthCompleteView()
+    
+    var userName: String = "" {
+        didSet {
+            rootView.userName = userName
+        }
+    }
     
     // MARK: - Life Cycle
     

@@ -50,6 +50,16 @@ final class SignInViewController: UIViewController {
     // MARK: - Custom Method
     
     private func bind() {
+        rootView.tapSignInObservable
+            .withUnretained(self)
+            .subscribe(onNext: { (`self`, _ ) in
+                let dvc = AuthCompleteViewController()
+                dvc.userName = self.rootView.userName
+                dvc.modalPresentationStyle = .fullScreen
+                self.present(dvc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         rootView.tapSignUpObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in

@@ -13,6 +13,8 @@ import SnapKit
 import Then
 
 final class UserNameViewController: UIViewController {
+    
+    // MARK: - Properties
 
     var disposeBag = DisposeBag()
     
@@ -64,6 +66,7 @@ final class UserNameViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 let dvc = UserPasswordViewController()
+                dvc.userName = self.rootView.textData
                 self.navigationController?.pushViewController(dvc, animated: true)
             })
             .disposed(by: disposeBag)

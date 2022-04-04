@@ -323,9 +323,9 @@
 		921E577E27FADC4000CDC913 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				921E578027FADC5B00CDC913 /* AuthCompleteView.swift */,
 				921E579727FAE4C900CDC913 /* SignInView.swift */,
 				921E578F27FADF7B00CDC913 /* SignUpView.swift */,
+				921E578027FADC5B00CDC913 /* AuthCompleteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

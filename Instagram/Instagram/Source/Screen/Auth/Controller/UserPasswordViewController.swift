@@ -13,6 +13,8 @@ import SnapKit
 import Then
 
 final class UserPasswordViewController: UIViewController {
+    
+    // MARK: - Properties
 
     var disposeBag = DisposeBag()
     
@@ -22,6 +24,8 @@ final class UserPasswordViewController: UIViewController {
                                                       closeButtonIsHidden: true)
     
     private lazy var rootView = SignUpView()
+    
+    var userName: String = "" 
     
     // MARK: - Life Cycle
     
@@ -67,6 +71,7 @@ final class UserPasswordViewController: UIViewController {
             .subscribe(onNext: { (`self`, _ ) in
                 let dvc = AuthCompleteViewController()
                 dvc.modalPresentationStyle = .fullScreen
+                dvc.userName = self.userName
                 self.present(dvc, animated: true)
             })
             .disposed(by: disposeBag)

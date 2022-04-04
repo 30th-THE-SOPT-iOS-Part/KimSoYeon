@@ -16,6 +16,11 @@ final class SignInView: UIView {
     
     // MARK: - Rx Observables
     
+    var tapSignInObservable: Observable<Void> {
+        return signInButton.rx.tapGestureRecognizedVoid()
+                    .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+    }
+    
     var tapSignUpObservable: Observable<Void> {
         return signUpButton.rx.tapGestureRecognizedVoid()
                     .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
@@ -49,7 +54,7 @@ final class SignInView: UIView {
         $0.titleLabel?.font = IDSFont.body3
     }
     
-    var loginButton = IDSButton().then {
+    var signInButton = IDSButton().then {
         $0.isActivated = false
         $0.setTitleWithStyle(title: "로그인", size: 15, weight: IDSButton.FontWeight.semiBold)
     }
@@ -65,6 +70,8 @@ final class SignInView: UIView {
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.titleLabel?.font = IDSFont.body4
     }
+    
+    var userName: String = ""
     
     // MARK: - Initializer
     
@@ -93,14 +100,13 @@ final class SignInView: UIView {
         addSubviews([logoImageView,
                      textFieldStackView,
                      pwGuideButton,
-                     loginButton,
+                     signInButton,
                      guideLabel,
                      signUpButton])
         
         textFieldStackView.addArrangedSubview(idTextField)
         textFieldStackView.addArrangedSubview(pwTextField)
 
-        
         logoImageView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).inset(30)
             $0.leading.trailing.equalToSuperview().inset(90)
@@ -118,14 +124,14 @@ final class SignInView: UIView {
             $0.trailing.equalToSuperview().inset(20)
         }
         
-        loginButton.snp.makeConstraints {
+        signInButton.snp.makeConstraints {
             $0.top.equalTo(pwGuideButton.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
         
         guideLabel.snp.makeConstraints {
-            $0.top.equalTo(loginButton.snp.bottom).offset(20)
+            $0.top.equalTo(signInButton.snp.bottom).offset(20)
             $0.leading.equalToSuperview().inset(110)
         }
         
@@ -144,9 +150,11 @@ final class SignInView: UIView {
 extension SignInView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if idTextField.hasText && pwTextField.hasText {
-            loginButton.isActivated = true
+            signInButton.isActivated = true
+            guard let text = idTextField.text else { return }
+            userName = text
         } else {
-            loginButton.isActivated = false
+            signInButton.isActivated = false
         }
     }
     
