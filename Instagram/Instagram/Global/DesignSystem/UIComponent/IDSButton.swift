@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class BDSButton: UIButton {
+final class IDSButton: UIButton {
     
     enum FontWeight {
         case regular
@@ -44,9 +44,8 @@ final class BDSButton: UIButton {
         setLayout()
     }
     
-    // MARK: - Private Methods
+    // MARK: - Init UI
     
-    /// 디폴트 버튼 스타일 설정
     private func configUI() {
         
     }
@@ -55,16 +54,16 @@ final class BDSButton: UIButton {
 
     }
     
-    // MARK: - Public Methods
+    // MARK: - Custom Method
     
-    public func setButtonColors(normalBgColor: UIColor,
+    internal func setButtonColors(normalBgColor: UIColor,
                              normalFontColor: UIColor,
                              activatedBgColor: UIColor,
                              activatedFontColor: UIColor) {
         
     }
     
-    public func setTitleWithStyle(title: String,
+    internal func setTitleWithStyle(title: String,
                                   size: CGFloat,
                                   weight: FontWeight = .regular) {
         let font: UIFont
@@ -85,17 +84,17 @@ final class BDSButton: UIButton {
         self.setTitle(title, for: .normal)
     }
     
-    public func setLeftIcon(imageName: String) {
+    internal func setLeftIcon(imageName: String) {
         leftIconImageView.isHidden = false
         leftIconImageView.image = UIImage(named: imageName)
     }
     
-    public func setRightIcon(imageName: String) {
+    internal func setRightIcon(imageName: String) {
         rightIconImageView.isHidden = false
         rightIconImageView.image = UIImage(named: imageName)
     }
     
-    public func setBorder(width: CGFloat, color: UIColor) {
+    internal func setBorder(width: CGFloat, color: UIColor) {
         self.layer.borderWidth = width
         self.layer.borderColor = color.cgColor
     }

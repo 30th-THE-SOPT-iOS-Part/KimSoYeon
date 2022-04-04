@@ -23,7 +23,7 @@ final class AuthCompleteViewController: UIViewController {
         setLayout()
     }
     
-    // MARK: - InitUI
+    // MARK: - Init UI
     
     private func configUI() {
         view.backgroundColor = .white

@@ -27,18 +27,18 @@ class IDSTextField: UITextField {
         configUI()
     }
     
-    // MARK: - Custom Method
+    // MARK: - Init UI
     
     private func configUI() {
-        self.layer.cornerRadius = 30
-        self.layer.masksToBounds = true
-        self.font = IDSFont.body1
-        self.backgroundColor = .white
+        layer.cornerRadius = 30
+        layer.masksToBounds = true
+        font = IDSFont.body1
+        backgroundColor = .white
     }
     
-    // MARK: - Public Method
+    // MARK: - Custom Method
     
-    public func setPlaceholder(placeholder: String) {
+    internal func setPlaceholder(placeholder: String) {
         self.placeholder = placeholder
     }
 }

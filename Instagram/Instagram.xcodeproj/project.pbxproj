@@ -35,6 +35,9 @@
 		921E578C27FADD6A00CDC913 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578B27FADD6A00CDC913 /* SignUpViewController.swift */; };
 		921E578E27FADD8E00CDC913 /* AuthCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578D27FADD8E00CDC913 /* AuthCompleteViewController.swift */; };
 		921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E578F27FADF7B00CDC913 /* SignUpView.swift */; };
+		921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */; };
+		921E579427FAE2BA00CDC913 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579327FAE2BA00CDC913 /* BackButton.swift */; };
+		921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579527FAE33C00CDC913 /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		921E578B27FADD6A00CDC913 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		921E578D27FADD8E00CDC913 /* AuthCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCompleteViewController.swift; sourceTree = "<group>"; };
 		921E578F27FADF7B00CDC913 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSNavigationBar.swift; sourceTree = "<group>"; };
+		921E579327FAE2BA00CDC913 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		921E579527FAE33C00CDC913 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		DB41544B785A02F968ACF11F /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +207,9 @@
 			children = (
 				921E575D27FAD25300CDC913 /* IDSTextField.swift */,
 				921E575F27FAD3AA00CDC913 /* IDSButton.swift */,
+				921E579127FAE23B00CDC913 /* IDSNavigationBar.swift */,
+				921E579327FAE2BA00CDC913 /* BackButton.swift */,
+				921E579527FAE33C00CDC913 /* CloseButton.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -464,10 +473,12 @@
 				921E578C27FADD6A00CDC913 /* SignUpViewController.swift in Sources */,
 				921E578A27FADD0300CDC913 /* HomeMainView.swift in Sources */,
 				921E577427FADADC00CDC913 /* MoyaLoggingPlugin.swift in Sources */,
+				921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */,
 				921E575527FAD0EE00CDC913 /* UIView+.swift in Sources */,
 				921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */,
 				921E576E27FADA7800CDC913 /* GeneralResponse.swift in Sources */,
 				921E577627FADB1A00CDC913 /* BaseTargetType.swift in Sources */,
+				921E579227FAE23B00CDC913 /* IDSNavigationBar.swift in Sources */,
 				921E576827FADA4C00CDC913 /* TempAPI.swift in Sources */,
 				921E576C27FADA5F00CDC913 /* TempService.swift in Sources */,
 				921E573F27FACB1A00CDC913 /* HomeMainViewController.swift in Sources */,
@@ -484,6 +495,7 @@
 				921E576027FAD3AA00CDC913 /* IDSButton.swift in Sources */,
 				921E575E27FAD25300CDC913 /* IDSTextField.swift in Sources */,
 				921E577027FADA8900CDC913 /* GeneralAPI.swift in Sources */,
+				921E579427FAE2BA00CDC913 /* BackButton.swift in Sources */,
 				921E577227FADA9800CDC913 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
