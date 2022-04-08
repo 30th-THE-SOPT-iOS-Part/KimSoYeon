@@ -41,6 +41,7 @@
 		921E579827FAE4C900CDC913 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579727FAE4C900CDC913 /* SignInView.swift */; };
 		921E579A27FAE73F00CDC913 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 921E579927FAE73F00CDC913 /* swiftgen.yml */; };
 		921E579E27FAE81E00CDC913 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921E579D27FAE81E00CDC913 /* Colors.xcassets */; };
+		9244A9DF27FEDD0400D7C2EC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A9DE27FEDD0400D7C2EC /* SignInViewModel.swift */; };
 		92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */; };
 		92920C7727FAF71C00DCABC7 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7627FAF71C00DCABC7 /* Reactive+.swift */; };
 		92920C7927FAFE6800DCABC7 /* UserPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7827FAFE6800DCABC7 /* UserPasswordViewController.swift */; };
@@ -84,6 +85,7 @@
 		921E579727FAE4C900CDC913 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		921E579927FAE73F00CDC913 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		921E579D27FAE81E00CDC913 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9244A9DE27FEDD0400D7C2EC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		92920C7627FAF71C00DCABC7 /* Reactive+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
 		92920C7827FAFE6800DCABC7 /* UserPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPasswordViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		921E577827FADBE700CDC913 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9244A9DD27FEDCB800D7C2EC /* ViewModel */,
 				921E577D27FADC3C00CDC913 /* Model */,
 				921E577E27FADC4000CDC913 /* View */,
 				921E577F27FADC4500CDC913 /* Controller */,
@@ -371,6 +374,14 @@
 				92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		9244A9DD27FEDCB800D7C2EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9244A9DE27FEDD0400D7C2EC /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FF974F9CEE94739839915902 /* Frameworks */ = {
@@ -520,6 +531,7 @@
 				921E578A27FADD0300CDC913 /* HomeMainView.swift in Sources */,
 				921E577427FADADC00CDC913 /* MoyaLoggingPlugin.swift in Sources */,
 				921E579627FAE33C00CDC913 /* CloseButton.swift in Sources */,
+				9244A9DF27FEDD0400D7C2EC /* SignInViewModel.swift in Sources */,
 				921E575527FAD0EE00CDC913 /* UIView+.swift in Sources */,
 				921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */,
 				921E576E27FADA7800CDC913 /* GeneralResponse.swift in Sources */,

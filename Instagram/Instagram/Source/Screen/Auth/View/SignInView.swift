@@ -45,12 +45,12 @@ final class SignInView: UIView {
         $0.alignment = .fill
     }
     
-    private var idTextField = IDSTextField().then {
+    var idTextField = IDSTextField().then {
         $0.setPlaceholder(placeholder: "전화번호, 사용자 이름 또는 이메일")
         $0.clearButtonMode = .whileEditing
     }
     
-    private var pwTextField = IDSTextField().then {
+    var pwTextField = IDSTextField().then {
         $0.setPlaceholder(placeholder: "비밀번호")
         $0.isSecureTextEntry = true
     }
