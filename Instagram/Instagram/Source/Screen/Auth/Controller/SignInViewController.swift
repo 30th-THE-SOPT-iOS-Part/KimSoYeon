@@ -118,9 +118,9 @@ final class SignInViewController: UIViewController {
     }
     
     private func pushToMain() {
-        let dvc = AuthCompleteViewController()
-        dvc.userName = signInView.userName
-        dvc.modalPresentationStyle = .fullScreen
-        present(dvc, animated: true)
+        let completeViewController = AuthCompleteViewController()
+        completeViewController.userName = signInView.userName
+        completeViewController.modalPresentationStyle = .fullScreen
+        present(completeViewController, animated: true)
     }
 }

@@ -69,9 +69,9 @@ final class UserNameViewController: UIViewController {
         rootView.tapNextObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
-                let dvc = UserPasswordViewController()
-                dvc.userName = self.rootView.textData
-                self.navigationController?.pushViewController(dvc, animated: true)
+                let passwordViewController = UserPasswordViewController()
+                passwordViewController.userName = self.rootView.textData
+                self.navigationController?.pushViewController(passwordViewController, animated: true)
             })
             .disposed(by: disposeBag)
         
