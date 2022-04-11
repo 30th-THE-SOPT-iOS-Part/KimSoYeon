@@ -31,13 +31,20 @@ final class IDSButton: UIButton {
         $0.isHidden = true
     }
     
-    var isActivated: Bool = false {
+//    var isActivated: Bool = false {
+//        didSet {
+//            self.backgroundColor = self.isActivated ? activatedBackgroundColor : normalBackgroundColor
+//            self.setTitleColor(self.isActivated ? activatedFontColor : normalFontColor, for: .normal)
+//            self.isEnabled = isActivated
+//        }
+//    }
+    
+    override var isEnabled: Bool {
         didSet {
-            self.backgroundColor = self.isActivated ? activatedBackgroundColor : normalBackgroundColor
-            self.setTitleColor(self.isActivated ? activatedFontColor : normalFontColor, for: .normal)
-            self.isEnabled = isActivated
+            changeAppearance()
         }
     }
+
     
     private var normalBackgroundColor: UIColor = .lightGray
     private var normalFontColor: UIColor = .darkGray
@@ -67,6 +74,11 @@ final class IDSButton: UIButton {
         
     }
     
+    private func changeAppearance() {
+        backgroundColor = self.isEnabled ? activatedBackgroundColor : normalBackgroundColor
+        setTitleColor(self.isEnabled ? activatedFontColor : normalFontColor, for: .normal)
+    }
+    
     // MARK: - Custom Method
     
     internal func setButtonColors(normalBackgroundColor: UIColor,
@@ -84,7 +96,6 @@ final class IDSButton: UIButton {
                                   weight: FontWeight = .regular) {
         let font: UIFont
         
-        // FIXME: - 폰트 수정
         switch weight {
         case .regular:
             font = IDSFont.body1
@@ -100,14 +111,14 @@ final class IDSButton: UIButton {
         self.setTitle(title, for: .normal)
     }
     
-    internal func setLeftIcon(imageName: String) {
+    internal func setLeftIcon(image: UIImage) {
         leftIconImageView.isHidden = false
-        leftIconImageView.image = UIImage(named: imageName)
+        leftIconImageView.image = image
     }
     
-    internal func setRightIcon(imageName: String) {
+    internal func setRightIcon(image: UIImage) {
         rightIconImageView.isHidden = false
-        rightIconImageView.image = UIImage(named: imageName)
+        rightIconImageView.image = image
     }
     
     internal func setBorder(width: CGFloat, color: UIColor) {

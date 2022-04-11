@@ -36,7 +36,7 @@ final class AuthCompleteView: UIView {
     }
     
     private var completeButton = IDSButton().then {
-        $0.isActivated = true
+        $0.isEnabled = true
         $0.setTitleWithStyle(title: "완료", size: 15, weight: IDSButton.FontWeight.semiBold)
     }
     

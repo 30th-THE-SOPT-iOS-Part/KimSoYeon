@@ -42,7 +42,7 @@ final class SignUpView: UIView {
     }
     
     private var nextButton = IDSButton().then {
-        $0.isActivated = false
+        $0.isEnabled = false
         $0.setTitleWithStyle(title: "다음", size: 15, weight: IDSButton.FontWeight.semiBold)
     }
     
@@ -66,7 +66,7 @@ final class SignUpView: UIView {
     
     var isFilled: Bool = false {
         didSet {
-            nextButton.isActivated = isFilled
+            nextButton.isEnabled = isFilled
         }
     }
     
@@ -129,11 +129,11 @@ final class SignUpView: UIView {
 extension SignUpView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if textField.hasText {
-            nextButton.isActivated = true
+            nextButton.isEnabled = true
             guard let text = textField.text else { return }
             textData = text
         } else {
-            nextButton.isActivated = false
+            nextButton.isEnabled = false
         }
     }
     

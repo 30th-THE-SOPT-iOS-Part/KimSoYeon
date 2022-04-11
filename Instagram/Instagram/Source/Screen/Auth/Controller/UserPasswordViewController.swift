@@ -31,7 +31,7 @@ final class UserPasswordViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        configNavigationUI()
     }
     
     override func viewDidLoad() {
@@ -42,6 +42,10 @@ final class UserPasswordViewController: UIViewController {
     }
     
     // MARK: - Init UI
+    
+    private func configNavigationUI() {
+        navigationController?.isNavigationBarHidden = true
+    }
     
     private func configUI() {
         view.backgroundColor = .white

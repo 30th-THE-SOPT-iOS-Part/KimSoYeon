@@ -27,23 +27,27 @@ final class SignInViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        configNavigationUI()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configUI()
-//        setLayout()
-//        bind()
+        configUI()
+        setLayout()
+        bind()
         
-        view.addSubview(signInView)
-        signInView.snp.makeConstraints {
-            $0.top.left.right.bottom.equalToSuperview()
-        }
-        bindViewModel()
+//        view.addSubview(signInView)
+//        signInView.snp.makeConstraints {
+//            $0.top.left.right.bottom.equalToSuperview()
+//        }
+//        bindViewModel()
     }
     
     // MARK: - Init UI
+    
+    private func configNavigationUI() {
+        navigationController?.isNavigationBarHidden = true
+    }
     
     private func configUI() {
         view.backgroundColor = .white

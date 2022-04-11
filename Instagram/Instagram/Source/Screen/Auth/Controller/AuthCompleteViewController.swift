@@ -35,7 +35,7 @@ final class AuthCompleteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        configNavigationUI()
     }
     
     override func viewDidLoad() {
@@ -46,6 +46,10 @@ final class AuthCompleteViewController: UIViewController {
     }
     
     // MARK: - Init UI
+    
+    private func configNavigationUI() {
+        navigationController?.isNavigationBarHidden = true
+    }
     
     private func configUI() {
         view.backgroundColor = .white

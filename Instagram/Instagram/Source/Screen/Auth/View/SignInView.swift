@@ -63,13 +63,13 @@ final class SignInView: UIView {
     }
     
     private var pwGuideButton = UIButton().then {
-        $0.titleLabel?.text = "비밀번호를 잊어버리셨나요?"
-        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.setTitle("비밀번호를 잊어버리셨나요?", for: .normal)
+        $0.setTitleColor(.systemGray, for: .normal)
         $0.titleLabel?.font = IDSFont.body3
     }
     
     var signInButton = IDSButton().then {
-        $0.isActivated = false
+        $0.isEnabled = false
         $0.setTitleWithStyle(title: "로그인", size: 15, weight: IDSButton.FontWeight.semiBold)
     }
     
@@ -90,7 +90,7 @@ final class SignInView: UIView {
     var isSelected: Bool = true {
         didSet {
             showPassWordButton.isSelected = isSelected
-            showPassWordButton.isSelected ? (pwTextField.isSecureTextEntry = false) : (pwTextField.isSecureTextEntry = true)
+            pwTextField.isSecureTextEntry = !showPassWordButton.isSelected
         }
     }
     
@@ -129,8 +129,10 @@ final class SignInView: UIView {
         textFieldStackView.addArrangedSubview(pwTextField)
         
         pwTextField.addSubview(showPassWordButton)
+        
         showPassWordButton.snp.makeConstraints {
-            $0.top.bottom.trailing.equalToSuperview().inset(5)
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(10)
             $0.width.height.equalTo(20)
         }
 
@@ -177,11 +179,11 @@ final class SignInView: UIView {
 extension SignInView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if idTextField.hasText && pwTextField.hasText {
-            signInButton.isActivated = true
+            signInButton.isEnabled = true
             guard let text = idTextField.text else { return }
             userName = text
         } else {
-            signInButton.isActivated = false
+            signInButton.isEnabled = false
         }
     }
     
