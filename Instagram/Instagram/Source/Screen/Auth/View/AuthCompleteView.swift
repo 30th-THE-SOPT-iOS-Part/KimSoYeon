@@ -26,18 +26,24 @@ final class AuthCompleteView: UIView {
         $0.textColor = .darkGray
         $0.font = IDSFont.body1
         $0.numberOfLines = 2
-        $0.textAlignment = .center
+        $0.textAlignment = .left
     }
     
     private var subTitleLabel = UILabel().then {
         $0.text = "언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다."
         $0.textColor = .systemGray3
-        $0.font = IDSFont.body5
+        $0.font = IDSFont.body3
     }
     
     private var completeButton = IDSButton().then {
         $0.isEnabled = true
         $0.setTitleWithStyle(title: "완료", size: 15, weight: IDSButton.FontWeight.semiBold)
+    }
+    
+    private var switchButton = UIButton().then {
+        $0.setTitle("다른 계정으로 로그인하기", for: .normal)
+        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.titleLabel?.font = IDSFont.body2
     }
     
     var userName: String = "" {
@@ -61,26 +67,31 @@ final class AuthCompleteView: UIView {
     // MARK: - Init UI
     
     private func configUI() {
-        
+        backgroundColor = .white
     }
     
     private func setLayout() {
-        addSubviews([titlLabel, subTitleLabel, completeButton])
+        addSubviews([titlLabel, subTitleLabel, completeButton, switchButton])
         
         titlLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).inset(100)
+            $0.top.equalTo(self.safeAreaLayoutGuide).inset(347)
             $0.centerX.equalToSuperview()
         }
         
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(titlLabel.snp.bottom).offset(10)
+            $0.top.equalTo(titlLabel.snp.bottom).offset(23)
             $0.centerX.equalToSuperview()
         }
         
         completeButton.snp.makeConstraints {
-            $0.top.equalTo(subTitleLabel.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview().inset(25)
-            $0.height.equalTo(50)
+            $0.top.equalTo(subTitleLabel.snp.bottom).offset(23)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(44)
+            $0.centerX.equalToSuperview()
+        }
+        
+        switchButton.snp.makeConstraints {
+            $0.top.equalTo(completeButton.snp.bottom).offset(18)
             $0.centerX.equalToSuperview()
         }
     }

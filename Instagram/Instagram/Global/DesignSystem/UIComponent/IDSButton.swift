@@ -98,13 +98,13 @@ final class IDSButton: UIButton {
         
         switch weight {
         case .regular:
-            font = IDSFont.body1
+            font = IDSFont.head1
         case .medium:
-            font = IDSFont.body1
+            font = IDSFont.head1
         case .bold:
-            font = IDSFont.body1
+            font = IDSFont.head1
         case .semiBold:
-            font = IDSFont.body1
+            font = IDSFont.head1
         }
         
         self.titleLabel?.font = font

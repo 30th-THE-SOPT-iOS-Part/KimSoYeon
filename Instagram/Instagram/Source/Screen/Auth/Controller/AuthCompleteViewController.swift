@@ -60,7 +60,7 @@ final class AuthCompleteViewController: UIViewController {
         
         navigationBar.snp.makeConstraints {
             $0.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(50)
+            $0.height.equalTo(44)
         }
         
         rootView.snp.makeConstraints {

@@ -40,7 +40,7 @@ final class SignInView: UIView {
     
     private var textFieldStackView = UIStackView().then {
         $0.axis = .vertical
-        $0.spacing = 10
+        $0.spacing = 16
         $0.distribution = .fillEqually
         $0.alignment = .fill
     }
@@ -76,13 +76,13 @@ final class SignInView: UIView {
     private var guideLabel = UILabel().then {
         $0.text = "계정이 없으신가요?"
         $0.textColor = .lightGray
-        $0.font = IDSFont.body4
+        $0.font = IDSFont.body2
     }
     
     private lazy var signUpButton = UIButton().then {
         $0.setTitle("가입하기", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
-        $0.titleLabel?.font = IDSFont.body4
+        $0.titleLabel?.font = IDSFont.body2
     }
     
     var userName: String = ""
@@ -137,36 +137,36 @@ final class SignInView: UIView {
         }
 
         logoImageView.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).inset(30)
-            $0.leading.trailing.equalToSuperview().inset(90)
-            $0.height.equalTo(120)
-        }
-        
-        textFieldStackView.snp.makeConstraints {
-            $0.top.equalTo(logoImageView.snp.bottom).offset(30)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(110)
-        }
-        
-        pwGuideButton.snp.makeConstraints {
-            $0.top.equalTo(textFieldStackView.snp.bottom).offset(7)
-            $0.trailing.equalToSuperview().inset(20)
-        }
-        
-        signInButton.snp.makeConstraints {
-            $0.top.equalTo(pwGuideButton.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.top.equalTo(self.safeAreaLayoutGuide).inset(126)
+            $0.leading.trailing.equalToSuperview().inset(100)
             $0.height.equalTo(50)
         }
         
+        textFieldStackView.snp.makeConstraints {
+            $0.top.equalTo(logoImageView.snp.bottom).offset(33)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(104)
+        }
+        
+        pwGuideButton.snp.makeConstraints {
+            $0.top.equalTo(textFieldStackView.snp.bottom).offset(16)
+            $0.leading.equalToSuperview().inset(16)
+        }
+        
+        signInButton.snp.makeConstraints {
+            $0.top.equalTo(pwGuideButton.snp.bottom).offset(34)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(44)
+        }
+        
         guideLabel.snp.makeConstraints {
-            $0.top.equalTo(signInButton.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(110)
+            $0.top.equalTo(signInButton.snp.bottom).offset(34)
+            $0.leading.equalToSuperview().inset(102)
         }
         
         signUpButton.snp.makeConstraints {
             $0.centerY.equalTo(guideLabel.snp.centerY)
-            $0.leading.equalTo(guideLabel.snp.trailing).offset(7)
+            $0.leading.equalTo(guideLabel.snp.trailing).offset(5)
         }
     }
     

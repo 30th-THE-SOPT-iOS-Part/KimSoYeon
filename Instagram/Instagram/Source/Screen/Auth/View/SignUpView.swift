@@ -99,25 +99,25 @@ final class SignUpView: UIView {
         addSubviews([titleLabel, subTitleLabel, textField, nextButton])
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).offset(30)
+            $0.top.equalTo(self.safeAreaLayoutGuide).inset(6)
             $0.centerX.equalToSuperview()
         }
         
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(19)
             $0.centerX.equalToSuperview()
         }
         
         textField.snp.makeConstraints {
-            $0.top.equalTo(subTitleLabel.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(50)
+            $0.top.equalTo(subTitleLabel.snp.bottom).offset(19)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(44)
         }
         
         nextButton.snp.makeConstraints { 
-            $0.top.equalTo(textField.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(50)
+            $0.top.equalTo(textField.snp.bottom).offset(22)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(44)
         }
     }
     
