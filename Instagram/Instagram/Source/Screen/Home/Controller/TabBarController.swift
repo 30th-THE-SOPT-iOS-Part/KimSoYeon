@@ -13,9 +13,30 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
         initUI()
         setTabBar()
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == (self.tabBar.items!)[2]{
+            UITabBar.appearance().backgroundColor = .black
+            UITabBar.appearance().tintColor = .white
+            
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .black
+            tabBar.standardAppearance = appearance;
+            tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+        } else {
+            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().tintColor = .black
+            
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            tabBar.standardAppearance = appearance;
+            tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+        }
     }
     
     // MARK: - Init UI
@@ -53,11 +74,5 @@ final class TabBarController: UITabBarController {
         
         self.setViewControllers(tabs, animated: false)
         self.selectedViewController = homeTab
-    }
-}
-
-extension TabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        return true
     }
 }
