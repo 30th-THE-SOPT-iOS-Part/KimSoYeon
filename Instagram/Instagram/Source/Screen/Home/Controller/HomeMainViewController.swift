@@ -19,7 +19,7 @@ final class HomeMainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configNavigationBar()
+        configNavigationUI()
     }
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ final class HomeMainViewController: UIViewController {
     
     // MARK: - InitUI
     
-    private func configNavigationBar() {
+    private func configNavigationUI() {
         navigationController?.isNavigationBarHidden = true
     }
     

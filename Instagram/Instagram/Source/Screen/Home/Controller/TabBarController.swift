@@ -58,7 +58,6 @@ final class TabBarController: UITabBarController {
 
 extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
         return true
     }
 }

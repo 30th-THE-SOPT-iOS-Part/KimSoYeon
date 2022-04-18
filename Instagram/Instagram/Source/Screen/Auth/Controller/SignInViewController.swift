@@ -73,8 +73,9 @@ final class SignInViewController: UIViewController {
         rootView.tapSignInObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
-                let dvc = TabBarController()
-                self.navigationController?.pushViewController(dvc, animated: true)
+                let dvc = UINavigationController(rootViewController: AuthCompleteViewController())
+                dvc.modalPresentationStyle = .fullScreen
+                self.present(dvc, animated: true)
             })
             .disposed(by: disposeBag)
         

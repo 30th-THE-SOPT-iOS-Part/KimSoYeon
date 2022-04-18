@@ -75,6 +75,14 @@ final class AuthCompleteViewController: UIViewController {
         rootView.tapCompleteObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
+                let dvc = TabBarController()
+                self.navigationController?.pushViewController(dvc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        rootView.tapSwitchObservable
+            .withUnretained(self)
+            .subscribe(onNext: { (`self`, _ ) in
                 guard let parentVC = self.presentingViewController as? UINavigationController else { return }
                 self.dismiss(animated: true) {
                     parentVC.popToRootViewController(animated: true)

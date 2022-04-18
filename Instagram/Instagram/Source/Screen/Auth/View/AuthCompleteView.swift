@@ -21,6 +21,11 @@ final class AuthCompleteView: UIView {
                     .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
     }
     
+    var tapSwitchObservable: Observable<Void> {
+        return switchButton.rx.tapGestureRecognizedVoid()
+                    .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+    }
+    
     private var titlLabel = UILabel().then {
         $0.text = "님, Instagram에\n오신 것을 환영합니다."
         $0.textColor = .darkGray
@@ -74,18 +79,18 @@ final class AuthCompleteView: UIView {
         addSubviews([titlLabel, subTitleLabel, completeButton, switchButton])
         
         titlLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).inset(347)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(self.safeAreaLayoutGuide).inset(222)
+            $0.leading.trailing.equalToSuperview().inset(35)
         }
         
         subTitleLabel.snp.makeConstraints {
             $0.top.equalTo(titlLabel.snp.bottom).offset(23)
-            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(35)
         }
         
         completeButton.snp.makeConstraints {
             $0.top.equalTo(subTitleLabel.snp.bottom).offset(23)
-            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.leading.trailing.equalToSuperview().inset(35)
             $0.height.equalTo(44)
             $0.centerX.equalToSuperview()
         }
