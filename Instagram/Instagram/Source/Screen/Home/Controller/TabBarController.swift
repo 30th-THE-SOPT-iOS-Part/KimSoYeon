@@ -17,39 +17,26 @@ final class TabBarController: UITabBarController {
         setTabBar()
     }
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item == (self.tabBar.items!)[2]{
-            UITabBar.appearance().backgroundColor = .black
-            UITabBar.appearance().tintColor = .white
-            
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .black
-            tabBar.standardAppearance = appearance;
-            tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
-        } else {
-            UITabBar.appearance().backgroundColor = .white
-            UITabBar.appearance().tintColor = .black
-            
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .white
-            tabBar.standardAppearance = appearance;
-            tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
-        }
-    }
-    
     // MARK: - Init UI
     
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        guard let items = tabBar.items else { return }
+        item == items[2] ? initDarkUI() : initUI()
+    }
+    
     private func initUI() {
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().tintColor = .black
-        
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .white
-        self.tabBar.standardAppearance = appearance;
-        self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+        tabBar.barTintColor = .white
+        tabBar.backgroundColor = .white
+        tabBar.tintColor = .black
+        tabBar.unselectedItemTintColor = .black
+        tabBar.isTranslucent = false
+    }
+    
+    private func initDarkUI() {
+        tabBar.backgroundColor = .black
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = .white
+        tabBar.isTranslucent = false
     }
     
     // MARK: - Custom Method
