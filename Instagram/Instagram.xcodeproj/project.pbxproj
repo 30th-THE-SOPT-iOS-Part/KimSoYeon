@@ -46,6 +46,7 @@
 		921E579827FAE4C900CDC913 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921E579727FAE4C900CDC913 /* SignInView.swift */; };
 		921E579A27FAE73F00CDC913 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 921E579927FAE73F00CDC913 /* swiftgen.yml */; };
 		921E579E27FAE81E00CDC913 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921E579D27FAE81E00CDC913 /* Colors.xcassets */; };
+		922DD0E8281290B9008F29DF /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DD0E7281290B9008F29DF /* UIWindow+.swift */; };
 		9244A9DF27FEDD0400D7C2EC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A9DE27FEDD0400D7C2EC /* SignInViewModel.swift */; };
 		92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */; };
 		92920C7727FAF71C00DCABC7 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92920C7627FAF71C00DCABC7 /* Reactive+.swift */; };
@@ -95,6 +96,7 @@
 		921E579727FAE4C900CDC913 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		921E579927FAE73F00CDC913 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		921E579D27FAE81E00CDC913 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		922DD0E7281290B9008F29DF /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		9244A9DE27FEDD0400D7C2EC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		92920C7427FAE95F00DCABC7 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		92920C7627FAF71C00DCABC7 /* Reactive+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				921E575427FAD0EE00CDC913 /* UIView+.swift */,
 				921E575627FAD11800CDC913 /* UITextField+.swift */,
 				92920C7627FAF71C00DCABC7 /* Reactive+.swift */,
+				922DD0E7281290B9008F29DF /* UIWindow+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				921E579427FAE2BA00CDC913 /* BackButton.swift in Sources */,
 				920995B4280DD9D9008C3491 /* ProfileMainViewController.swift in Sources */,
 				920995B1280DD9B5008C3491 /* ReelsMainViewController.swift in Sources */,
+				922DD0E8281290B9008F29DF /* UIWindow+.swift in Sources */,
 				921E577227FADA9800CDC913 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

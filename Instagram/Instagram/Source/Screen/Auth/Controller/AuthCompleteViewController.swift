@@ -76,7 +76,10 @@ final class AuthCompleteViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 let dvc = TabBarController()
-                self.navigationController?.pushViewController(dvc, animated: true)
+                guard let window = self.view.window else {
+                    return
+                }
+                window.switchRootViewController(dvc)
             })
             .disposed(by: disposeBag)
         
