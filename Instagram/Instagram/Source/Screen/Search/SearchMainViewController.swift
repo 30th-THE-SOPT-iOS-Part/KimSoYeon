@@ -23,7 +23,7 @@ final class SearchMainViewController: UIViewController {
     // MARK: - Init UI
     
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray3
     }
     
     private func setLayout() {

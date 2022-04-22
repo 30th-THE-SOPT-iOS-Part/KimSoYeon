@@ -23,7 +23,7 @@ final class ProfileMainViewController: UIViewController {
     // MARK: - Init UI
     
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
     }
     
     private func setLayout() {

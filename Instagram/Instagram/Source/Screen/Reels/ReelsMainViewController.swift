@@ -23,7 +23,7 @@ final class ReelsMainViewController: UIViewController {
     // MARK: - Init UI
     
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray4
     }
     
     private func setLayout() {

@@ -12,9 +12,6 @@ import Then
 
 final class HomeMainViewController: UIViewController {
     
-    // MARK: - Properties
-    
-    
     // MARK: - Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +32,7 @@ final class HomeMainViewController: UIViewController {
     }
     
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray2
     }
     
     private func setLayout() {

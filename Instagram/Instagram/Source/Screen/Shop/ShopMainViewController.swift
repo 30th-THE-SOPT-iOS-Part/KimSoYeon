@@ -23,7 +23,7 @@ final class ShopMainViewController: UIViewController {
     // MARK: - Init UI
     
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray5
     }
     
     private func setLayout() {

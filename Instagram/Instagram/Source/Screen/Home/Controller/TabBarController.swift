@@ -13,7 +13,7 @@ final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUI()
+        configUI()
         setTabBar()
     }
     
@@ -21,10 +21,10 @@ final class TabBarController: UITabBarController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard let items = tabBar.items else { return }
-        item == items[2] ? initDarkUI() : initUI()
+        item == items[2] ? configDarkUI() : configUI()
     }
     
-    private func initUI() {
+    private func configUI() {
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
         tabBar.tintColor = .black
@@ -32,7 +32,7 @@ final class TabBarController: UITabBarController {
         tabBar.isTranslucent = false
     }
     
-    private func initDarkUI() {
+    private func configDarkUI() {
         tabBar.backgroundColor = .black
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .white
