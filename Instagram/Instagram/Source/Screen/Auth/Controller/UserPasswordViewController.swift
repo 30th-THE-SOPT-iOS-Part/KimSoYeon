@@ -74,9 +74,12 @@ final class UserPasswordViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 let completeViewController = AuthCompleteViewController()
-                completeViewController.modalPresentationStyle = .fullScreen
                 completeViewController.userName = self.userName
-                self.present(completeViewController, animated: true)
+                
+                let dvc = UINavigationController(rootViewController: completeViewController)
+                dvc.modalPresentationStyle = .fullScreen
+                
+                self.present(dvc, animated: true)
             })
             .disposed(by: disposeBag)
         
