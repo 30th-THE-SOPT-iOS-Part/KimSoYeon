@@ -8,9 +8,9 @@
 
 | 주차 | 내용 | 세미나 | 과제 |
 | :------: | :-------------- |  :---: |:-:|
-| 1주차 | iOS 개발 입문 : Xcode 기본 사용법, Layout 기초, View 화면 전환 | 🙆🏻‍♀️ | 🙆🏻‍♀️ |
-| 2주차 | UI 설계 기초(1) : AutoLayout, StackView, TabBarController |  |  |
-| 3주차 | UI 설계 기초(2) : ScrollView, TableView, CollectionView |  |  |
+| 1주차 | iOS 개발 입문 : Xcode 기본 사용법, Layout 기초, View 화면 전환 | 💟 | 💟 |
+| 2주차 | UI 설계 기초(1) : AutoLayout, StackView, TabBarController | 💟 | 💟 |
+| 3주차 | UI 설계 기초(2) : ScrollView, TableView, CollectionView | 💟 |  |
 | 4주차 | 서버 통신 기초: 서버와 클라이언트 이해, RESTful API, Alamofire를 활용한 실습 |  |  |
 | 5주차 | 클라이언트 · 디자인 합동 세미나 |  |  |
 | 6주차 | 클라이언트 · 서버 합동 세미나 / 솝커톤 |  |  |
