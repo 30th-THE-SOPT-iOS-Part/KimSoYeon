@@ -8,9 +8,10 @@
 import UIKit
 
 public enum IDSFont {
-    static let body1 = UIFont.systemFont(ofSize: 17, weight: .regular)
-    static let body2 = UIFont.systemFont(ofSize: 16, weight: .regular)
-    static let body3 = UIFont.systemFont(ofSize: 15, weight: .regular)
-    static let body4 = UIFont.systemFont(ofSize: 14, weight: .regular)
-    static let body5 = UIFont.systemFont(ofSize: 13, weight: .regular)
+    static let body1 = UIFont.systemFont(ofSize: 24, weight: .regular)
+    static let body2 = UIFont.systemFont(ofSize: 14, weight: .regular)
+    static let body3 = UIFont.systemFont(ofSize: 12, weight: .regular)
+    
+    static let head1 = UIFont.systemFont(ofSize: 14, weight: .semibold)
+    static let head2 = UIFont.systemFont(ofSize: 12, weight: .semibold)
 }

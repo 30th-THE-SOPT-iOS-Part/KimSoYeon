@@ -10,12 +10,14 @@ import UIKit
 import SnapKit
 import Then
 
-final class MainViewController: UIViewController {
-    
-    // MARK: - Properties
-    
+final class HomeMainViewController: UIViewController {
     
     // MARK: - Life Cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configNavigationUI()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,12 @@ final class MainViewController: UIViewController {
     
     // MARK: - InitUI
     
+    private func configNavigationUI() {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     private func configUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray2
     }
     
     private func setLayout() {

@@ -60,7 +60,7 @@ final class AuthCompleteViewController: UIViewController {
         
         navigationBar.snp.makeConstraints {
             $0.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(50)
+            $0.height.equalTo(44)
         }
         
         rootView.snp.makeConstraints {
@@ -73,6 +73,17 @@ final class AuthCompleteViewController: UIViewController {
     
     private func bind() {
         rootView.tapCompleteObservable
+            .withUnretained(self)
+            .subscribe(onNext: { (`self`, _ ) in
+                let dvc = TabBarController()
+                guard let window = self.view.window else {
+                    return
+                }
+                window.switchRootViewController(dvc)
+            })
+            .disposed(by: disposeBag)
+        
+        rootView.tapSwitchObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 guard let parentVC = self.presentingViewController as? UINavigationController else { return }

@@ -34,7 +34,7 @@ final class IDSTextField: UITextField {
         layer.masksToBounds = true
         layer.borderWidth = 1
         layer.borderColor = UIColor.systemGray5.cgColor
-        font = IDSFont.body1
+        font = IDSFont.body2
         backgroundColor = .systemGray6
     }
     
