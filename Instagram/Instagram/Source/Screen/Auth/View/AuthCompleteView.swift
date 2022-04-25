@@ -26,7 +26,7 @@ final class AuthCompleteView: UIView {
                     .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
     }
     
-    private var titlLabel = UILabel().then {
+    private var titleLabel = UILabel().then {
         $0.text = "님, Instagram에\n오신 것을 환영합니다."
         $0.textColor = .darkGray
         $0.font = IDSFont.body1
@@ -53,7 +53,7 @@ final class AuthCompleteView: UIView {
     
     var userName: String = "" {
         didSet {
-            titlLabel.text = "\(userName)님, Instagram에\n오신 것을 환영합니다."
+            titleLabel.text = "\(userName)님, Instagram에\n오신 것을 환영합니다."
         }
     }
     
@@ -76,15 +76,15 @@ final class AuthCompleteView: UIView {
     }
     
     private func setLayout() {
-        addSubviews([titlLabel, subTitleLabel, completeButton, switchButton])
+        addSubviews([titleLabel, subTitleLabel, completeButton, switchButton])
         
-        titlLabel.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).inset(222)
             $0.leading.trailing.equalToSuperview().inset(35)
         }
         
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(titlLabel.snp.bottom).offset(23)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(23)
             $0.leading.trailing.equalToSuperview().inset(35)
         }
         
