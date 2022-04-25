@@ -7,10 +7,16 @@
 
 import UIKit
 
+import RxSwift
+
 import SnapKit
 import Then
 
 final class HomeMainViewController: UIViewController {
+    
+    var disposeBag = DisposeBag()
+    
+    private lazy var rootView = HomeMainView()
     
     // MARK: - Life Cycle
     
