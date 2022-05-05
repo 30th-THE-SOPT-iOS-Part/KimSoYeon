@@ -126,7 +126,7 @@ extension HomeMainView: UITableViewDelegate {
         case 0:
             return 93
         case 1:
-            return 488
+            return UITableView.automaticDimension
         default:
             return 0
         }

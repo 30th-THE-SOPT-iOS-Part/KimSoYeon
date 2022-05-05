@@ -142,7 +142,7 @@ final class HomeMainContentTableViewCell: UITableViewCell {
         contentImageView.snp.makeConstraints {
             $0.top.equalTo(userImageView.snp.bottom).offset(12)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(340)
+//            $0.height.equalTo(340)
         }
         
         buttonStackView.snp.makeConstraints {
@@ -175,7 +175,7 @@ final class HomeMainContentTableViewCell: UITableViewCell {
         
         commentLabel.snp.makeConstraints {
             $0.top.equalTo(contentUserNameLabel.snp.bottom).offset(4)
-            $0.leading.equalToSuperview().inset(12)
+            $0.leading.bottom.equalToSuperview().inset(12)
         }
     }
 
