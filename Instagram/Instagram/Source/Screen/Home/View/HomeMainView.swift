@@ -10,6 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
+protocol HomeMainViewDelegate: AnyObject {
+    func touchUpLikeButton(index: Int)
+}
+
 final class HomeMainView: UIView {
     
     private var navigationBar = UIView().then {
@@ -49,6 +53,8 @@ final class HomeMainView: UIView {
         $0.register(HomeMainStoryTableViewCell.self,
                                   forCellReuseIdentifier: HomeMainStoryTableViewCell.cellIdentifier)
     }
+    
+    weak var delegate: HomeMainViewDelegate?
     
     // MARK: - Initializer
     
@@ -125,6 +131,17 @@ extension HomeMainView: UITableViewDelegate {
             return 0
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            print("Story View")
+        case 1:
+            print("Content View")
+        default:
+            print("Default")
+        }
+    }
 }
 
 extension HomeMainView: UITableViewDataSource {
@@ -150,10 +167,20 @@ extension HomeMainView: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeMainContentTableViewCell.cellIdentifier, for: indexPath) as? HomeMainContentTableViewCell else { return UITableViewCell() }
+            cell.index = indexPath.row
             cell.setData(HomeMainContentDataModel.sampleData[indexPath.row])
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
         }
+    }
+}
+
+// MARK: - Cusom Delegate
+
+extension HomeMainView: HomeMainContentTableViewCellDelegate {
+    func touchUpLikeButton(index: Int) {
+        delegate?.touchUpLikeButton(index: index)
     }
 }

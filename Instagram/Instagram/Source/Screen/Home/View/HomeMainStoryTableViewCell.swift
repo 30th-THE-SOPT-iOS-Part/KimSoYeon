@@ -25,6 +25,7 @@ final class HomeMainStoryTableViewCell: UITableViewCell {
         return UICollectionView(frame: .zero, collectionViewLayout: layout).then {
             $0.backgroundColor = .clear
             $0.isScrollEnabled = true
+            $0.showsHorizontalScrollIndicator = false
         }
     }()
     

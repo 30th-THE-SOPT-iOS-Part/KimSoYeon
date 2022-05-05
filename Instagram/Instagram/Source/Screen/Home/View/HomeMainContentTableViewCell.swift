@@ -10,6 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
+protocol HomeMainContentTableViewCellDelegate: AnyObject {
+    func touchUpLikeButton(index: Int)
+}
+
 final class HomeMainContentTableViewCell: UITableViewCell {
     static var cellIdentifier: String { return String(describing: self) }
     
@@ -80,6 +84,9 @@ final class HomeMainContentTableViewCell: UITableViewCell {
         $0.textColor = .darkGray
         $0.setTextSpacingBy(value: -0.3)
     }
+
+    weak var delegate: HomeMainContentTableViewCellDelegate?
+    var index: Int = 0
     
     // MARK: - Initializer
     
@@ -187,6 +194,7 @@ final class HomeMainContentTableViewCell: UITableViewCell {
     // MARK: - @objc
     
     @objc func touchUpLikeButton() {
-        print("Heart Button Tapped")
+        delegate?.touchUpLikeButton(index: index)
+        likeButton.isSelected.toggle()
     }
 }

@@ -29,6 +29,7 @@ final class HomeMainViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        bind()
     }
     
     // MARK: - InitUI
@@ -49,7 +50,16 @@ final class HomeMainViewController: UIViewController {
         }
     }
     
-    // MARK: - Custom Method
-    
+    private func bind() {
+        rootView.delegate = self
+    }
+}
+
+// MARK: - Custom Delegate
+
+extension HomeMainViewController: HomeMainViewDelegate {
+    func touchUpLikeButton(index: Int) {
+        print(index, "is Tapped")
+    }
 }
 
