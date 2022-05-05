@@ -16,4 +16,5 @@ public enum IDSFont {
     static let body3 = UIFont.systemFont(ofSize: 12, weight: .regular)
     
     static let body4 = UIFont.systemFont(ofSize: 10, weight: .medium)
+    static let body5 = UIFont.systemFont(ofSize: 10, weight: .semibold)
 }
