@@ -50,6 +50,10 @@ internal enum Asset {
     internal static let icnUnlike = ImageAsset(name: "icn_unlike")
     internal static let passwordHiddenEyeIcon = ImageAsset(name: "password_hidden_eyeIcon")
     internal static let passwordShownEyeIcon = ImageAsset(name: "password_shown_eyeIcon")
+    internal static let postImage1 = ImageAsset(name: "postImage1")
+    internal static let postImage2 = ImageAsset(name: "postImage2")
+    internal static let postImage3 = ImageAsset(name: "postImage3")
+    internal static let postImage4 = ImageAsset(name: "postImage4")
   }
   internal enum Colors {
   }
