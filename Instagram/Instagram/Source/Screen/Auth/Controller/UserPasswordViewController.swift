@@ -58,7 +58,7 @@ final class UserPasswordViewController: UIViewController {
         
         navigationBar.snp.makeConstraints {
             $0.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(44)
+            $0.height.equalTo(IDSNavigationBar.Metric.navigationHeight)
         }
         
         rootView.snp.makeConstraints {
@@ -74,7 +74,8 @@ final class UserPasswordViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 let completeViewController = AuthCompleteViewController()
-                completeViewController.userName = self.userName
+                completeViewController.userName = AuthModel.name
+                AuthModel.password = self.rootView.textData
                 
                 let dvc = UINavigationController(rootViewController: completeViewController)
                 dvc.modalPresentationStyle = .fullScreen

@@ -54,7 +54,7 @@ final class UserNameViewController: UIViewController {
         
         navigationBar.snp.makeConstraints {
             $0.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(44)
+            $0.height.equalTo(IDSNavigationBar.Metric.navigationHeight)
         }
         
         rootView.snp.makeConstraints {
@@ -70,7 +70,7 @@ final class UserNameViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
                 let passwordViewController = UserPasswordViewController()
-                passwordViewController.userName = self.rootView.textData
+                AuthModel.email = self.rootView.textData
                 self.navigationController?.pushViewController(passwordViewController, animated: true)
             })
             .disposed(by: disposeBag)

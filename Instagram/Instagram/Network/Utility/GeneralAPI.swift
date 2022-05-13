@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct GeneralAPI {
+    
+    // MARK: - Base URL
+    
+    static let baseURL = "http://13.124.62.236"
+    
+    // MARK: - Feature URL
+    
+    static let loginURL = "/auth/signin"
+    static let signUpURL = "/auth/signup"
+}
