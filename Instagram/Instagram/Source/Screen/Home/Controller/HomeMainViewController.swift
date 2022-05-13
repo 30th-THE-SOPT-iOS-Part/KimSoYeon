@@ -29,6 +29,7 @@ final class HomeMainViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        bind()
     }
     
     // MARK: - InitUI
@@ -38,11 +39,27 @@ final class HomeMainViewController: UIViewController {
     }
     
     private func configUI() {
-        view.backgroundColor = .systemGray2
+        view.backgroundColor = .white
     }
     
     private func setLayout() {
+        view.addSubview(rootView)
         
+        rootView.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    private func bind() {
+        rootView.delegate = self
+    }
+}
+
+// MARK: - Custom Delegate
+
+extension HomeMainViewController: HomeMainViewDelegate {
+    func touchUpLikeButton(index: Int) {
+        print(index, "is Tapped")
     }
 }
 
