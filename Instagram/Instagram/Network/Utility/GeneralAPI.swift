@@ -15,6 +15,6 @@ struct GeneralAPI {
     
     // MARK: - Feature URL
     
-    static let loginURL = "/auth/signin"
+    static let signInURL = "/auth/signin"
     static let signUpURL = "/auth/signup"
 }
