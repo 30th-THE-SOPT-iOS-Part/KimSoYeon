@@ -11,6 +11,9 @@
 		9201FE52282E322A00443946 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE51282E322A00443946 /* SignInService.swift */; };
 		9201FE54282E327C00443946 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE53282E327C00443946 /* AuthRequest.swift */; };
 		9201FE56282E33E800443946 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE55282E33E800443946 /* SignInAPI.swift */; };
+		9201FE5B282E3AF100443946 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE5A282E3AF100443946 /* HomeResponse.swift */; };
+		9201FE5D282E3B6400443946 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE5C282E3B6400443946 /* HomeService.swift */; };
+		9201FE5F282E3C1F00443946 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201FE5E282E3C1F00443946 /* HomeAPI.swift */; };
 		920995A8280DD79F008C3491 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920995A7280DD79F008C3491 /* TabBarController.swift */; };
 		920995AB280DD965008C3491 /* SearchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920995AA280DD965008C3491 /* SearchMainViewController.swift */; };
 		920995AF280DD9AD008C3491 /* ShopMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920995AE280DD9AD008C3491 /* ShopMainViewController.swift */; };
@@ -70,6 +73,9 @@
 		9201FE51282E322A00443946 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
 		9201FE53282E327C00443946 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		9201FE55282E33E800443946 /* SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAPI.swift; sourceTree = "<group>"; };
+		9201FE5A282E3AF100443946 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		9201FE5C282E3B6400443946 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		9201FE5E282E3C1F00443946 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		920995A7280DD79F008C3491 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		920995AA280DD965008C3491 /* SearchMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainViewController.swift; sourceTree = "<group>"; };
 		920995AE280DD9AD008C3491 /* ShopMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,30 @@
 				DB41544B785A02F968ACF11F /* Pods-Instagram.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9201FE57282E3AAA00443946 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9201FE5C282E3B6400443946 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9201FE58282E3AB500443946 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9201FE5E282E3C1F00443946 /* HomeAPI.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9201FE59282E3ABD00443946 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9201FE5A282E3AF100443946 /* HomeResponse.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		920995A9280DD950008C3491 /* Search */ = {
@@ -241,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				921E576327FAD9F500CDC913 /* API */,
-				921E576427FAD9FF00CDC913 /* DataModel */,
+				921E576427FAD9FF00CDC913 /* APIModel */,
 				921E576527FADA0700CDC913 /* Service */,
 				921E576627FADA3A00CDC913 /* Utility */,
 			);
@@ -320,22 +350,25 @@
 		921E576327FAD9F500CDC913 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9201FE58282E3AB500443946 /* Home */,
 				92BF252A2829676A00DE0205 /* Auth */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		921E576427FAD9FF00CDC913 /* DataModel */ = {
+		921E576427FAD9FF00CDC913 /* APIModel */ = {
 			isa = PBXGroup;
 			children = (
+				9201FE59282E3ABD00443946 /* Home */,
 				92BF252F2829685000DE0205 /* Auth */,
 			);
-			path = DataModel;
+			path = APIModel;
 			sourceTree = "<group>";
 		};
 		921E576527FADA0700CDC913 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9201FE57282E3AAA00443946 /* Home */,
 				92BF25292829675400DE0205 /* Auth */,
 			);
 			path = Service;
@@ -511,7 +544,7 @@
 				921E573327FACB1A00CDC913 /* Sources */,
 				921E573427FACB1A00CDC913 /* Frameworks */,
 				921E573527FACB1A00CDC913 /* Resources */,
-				2BC0F4C06902F95C74337A91 /* [CP] Embed Pods Frameworks */,
+				8512CE3ABBFA202A1235F577 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -593,7 +626,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2BC0F4C06902F95C74337A91 /* [CP] Embed Pods Frameworks */ = {
+		8512CE3ABBFA202A1235F577 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -645,6 +678,7 @@
 				9201FE52282E322A00443946 /* SignInService.swift in Sources */,
 				921E579027FADF7B00CDC913 /* SignUpView.swift in Sources */,
 				92BF252E2829678F00DE0205 /* SignUpService.swift in Sources */,
+				9201FE5B282E3AF100443946 /* HomeResponse.swift in Sources */,
 				9201FE56282E33E800443946 /* SignInAPI.swift in Sources */,
 				921E576E27FADA7800CDC913 /* BaseResponse.swift in Sources */,
 				92920C7527FAE95F00DCABC7 /* Assets+Generated.swift in Sources */,
@@ -660,6 +694,7 @@
 				921E578127FADC5B00CDC913 /* AuthCompleteView.swift in Sources */,
 				921E573B27FACB1A00CDC913 /* AppDelegate.swift in Sources */,
 				921E577B27FADC2E00CDC913 /* SignInViewController.swift in Sources */,
+				9201FE5D282E3B6400443946 /* HomeService.swift in Sources */,
 				920995AB280DD965008C3491 /* SearchMainViewController.swift in Sources */,
 				921E578E27FADD8E00CDC913 /* AuthCompleteViewController.swift in Sources */,
 				92BF253528296A8800DE0205 /* SignUpRequest.swift in Sources */,
@@ -667,6 +702,7 @@
 				92920C7727FAF71C00DCABC7 /* Reactive+.swift in Sources */,
 				921E578827FADCFA00CDC913 /* HomeMainModel.swift in Sources */,
 				924AC4D72816C18D0056F0A5 /* UILabel+.swift in Sources */,
+				9201FE5F282E3C1F00443946 /* HomeAPI.swift in Sources */,
 				920995A8280DD79F008C3491 /* TabBarController.swift in Sources */,
 				921E573D27FACB1A00CDC913 /* SceneDelegate.swift in Sources */,
 				921E575C27FAD1DF00CDC913 /* IDSFont.swift in Sources */,

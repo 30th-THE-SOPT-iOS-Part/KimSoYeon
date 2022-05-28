@@ -14,6 +14,12 @@ import Then
 
 final class HomeMainViewController: UIViewController {
     
+    // MARK: - Network
+    
+    private let homeAPI = HomeAPI.shared
+    
+    // MARK: - Properties
+    
     var disposeBag = DisposeBag()
     
     private lazy var rootView = HomeMainView()
@@ -52,6 +58,11 @@ final class HomeMainViewController: UIViewController {
     
     private func bind() {
         rootView.delegate = self
+        
+        self.homeAPI.getImageList() { data, err in
+            guard let data = data else { return }
+            dump(data)
+        }
     }
 }
 
