@@ -8,6 +8,8 @@ target 'Instagram' do
   pod 'Then', '2.7.0'
   pod 'SnapKit', '5.0.1'
 
+  pod 'Kingfisher', '~> 7.0'
+
   pod 'SwiftGen', '~> 6.0'
 
   pod 'RxSwift', '6.2.0'

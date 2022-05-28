@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
+import Kingfisher
+
 protocol HomeMainContentTableViewCellDelegate: AnyObject {
     func touchUpLikeButton(index: Int)
 }
@@ -182,13 +184,18 @@ final class HomeMainContentTableViewCell: UITableViewCell {
     // MARK: - Custom Method
     
     internal func setData(_ data: HomeMainContentDataModel) {
-        userImageView.image = data.userImage
+        
         userNameLabel.text = data.userName
         contentUserNameLabel.text = data.userName
         contentImageView.image = data.contentImage
         contentLabel.text = data.content
         likeLabel.text = "좋아요 \(data.likeCount)"
         commentLabel.text = "댓글 \(data.commentCount) 모두 보기"
+    }
+    
+    internal func setImage(_ data: String) {
+        let url = URL(string: data)
+        userImageView.kf.setImage(with: url)
     }
     
     // MARK: - @objc

@@ -7,15 +7,11 @@
 
 import Foundation
 
-struct GenericResponse<T: Decodable>: Decodable {
-    var status: Int
-    var success: Bool
-    var message: String?
-    var data: T?
-    
-    var statusCase: NetworkResult? {
-        return NetworkResult(rawValue: status)
-    }
+struct BaseResponse<T: Decodable>: Decodable {
+    let status: Int
+    let success: Bool
+    let message: String
+    let data: T?
     
     enum CodingKeys: String, CodingKey {
         case message
@@ -33,15 +29,11 @@ struct GenericResponse<T: Decodable>: Decodable {
     }
 }
 
-struct GenericArrayResponse<T: Decodable>: Decodable {
-    let status: Int
-    let message: String?
+struct BaseArrayResponseType<T: Decodable>: Decodable {
+    let status: Int?
     let success: Bool?
+    let message: String?
     let data: [T]?
-    
-    var statusCase: NetworkResult? {
-        return NetworkResult(rawValue: status)
-    }
     
     enum CodingKeys: String, CodingKey {
         case message
@@ -58,6 +50,3 @@ struct GenericArrayResponse<T: Decodable>: Decodable {
         success = (try? values.decode(Bool.self, forKey: .success)) ?? false
     }
 }
-
-/// status, message, success 이외에 정보를 사용하지 않는 경우에 VoidType를 설정해주면 됩니다!
-struct VoidType: Decodable {}

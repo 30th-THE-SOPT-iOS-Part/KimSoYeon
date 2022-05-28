@@ -14,6 +14,10 @@ import Then
 
 final class SignInViewController: UIViewController {
     
+    // MARK: - Network
+    
+    private let signInAPI = SignInAPI.shared
+    
     // MARK: - Properties
     
     var disposeBag = DisposeBag()
@@ -73,13 +77,7 @@ final class SignInViewController: UIViewController {
         rootView.tapSignInObservable
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
-                let vc = AuthCompleteViewController()
-                vc.userName = self.rootView.userName
-                
-                let dvc = UINavigationController(rootViewController: vc)
-                dvc.modalPresentationStyle = .fullScreen
-                
-                self.present(dvc, animated: true)
+                self.signIn()
             })
             .disposed(by: disposeBag)
         
@@ -125,5 +123,23 @@ final class SignInViewController: UIViewController {
         completeViewController.userName = signInView.userName
         completeViewController.modalPresentationStyle = .fullScreen
         present(completeViewController, animated: true)
+    }
+    
+    private func signIn() {
+        guard let password = rootView.pwTextField.text else { return }
+        
+        self.signInAPI.signUp(parameter: AuthRequest(name: self.rootView.userName, email: self.rootView.userName, password: password)) { data, err in
+            guard let data = data else { return }
+            
+            let alertVC = UIAlertController(title: "로그인 성공", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default) { action in
+                print("action")
+                let vc = TabBarController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            alertVC.addAction(okAction)
+            self.present(alertVC, animated: true)
+        }
     }
 }

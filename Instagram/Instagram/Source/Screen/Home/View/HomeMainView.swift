@@ -56,6 +56,8 @@ final class HomeMainView: UIView {
     
     weak var delegate: HomeMainViewDelegate?
     
+    var imageList = [HomeResponse]()
+    
     // MARK: - Initializer
     
     init() {
@@ -170,6 +172,8 @@ extension HomeMainView: UITableViewDataSource {
             cell.index = indexPath.row
             cell.setData(HomeMainContentDataModel.sampleData[indexPath.row])
             cell.delegate = self
+            // FIXME: - ERROR: Out Of Index
+//            cell.setImage(imageList[indexPath.row].downloadURL)
             return cell
         default:
             return UITableViewCell()

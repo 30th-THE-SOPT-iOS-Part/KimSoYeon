@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+internal struct AuthModel {
+    static var name: String = ""
+    static var email: String = ""
+    static var password: String = ""
+}

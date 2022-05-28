@@ -14,6 +14,10 @@ import Then
 
 final class AuthCompleteViewController: UIViewController {
     
+    // MARK: - Network
+        
+    private let signUpAPI = SignUpAPI.shared
+    
     // MARK: - Properties
     
     var disposeBag = DisposeBag()
@@ -45,6 +49,10 @@ final class AuthCompleteViewController: UIViewController {
         bind()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Init UI
     
     private func configNavigationUI() {
@@ -60,7 +68,7 @@ final class AuthCompleteViewController: UIViewController {
         
         navigationBar.snp.makeConstraints {
             $0.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(44)
+            $0.height.equalTo(IDSNavigationBar.Metric.navigationHeight)
         }
         
         rootView.snp.makeConstraints {
@@ -73,13 +81,16 @@ final class AuthCompleteViewController: UIViewController {
     
     private func bind() {
         rootView.tapCompleteObservable
+            .throttleOnBackground(.seconds(1))
+            .observeOnMain()
             .withUnretained(self)
             .subscribe(onNext: { (`self`, _ ) in
-                let dvc = TabBarController()
-                guard let window = self.view.window else {
-                    return
+                self.signUpAPI.signUp(parameter: SignUpRequest(name: AuthModel.name, email: AuthModel.email, password: AuthModel.password)) { data, err in
+                    guard let data = data else {
+                        return
+                    }
+                    self.alert(message: "회원가입 성공")
                 }
-                window.switchRootViewController(dvc)
             })
             .disposed(by: disposeBag)
         
@@ -88,9 +99,25 @@ final class AuthCompleteViewController: UIViewController {
             .subscribe(onNext: { (`self`, _ ) in
                 guard let parentVC = self.presentingViewController as? UINavigationController else { return }
                 self.dismiss(animated: true) {
-                    parentVC.popToRootViewController(animated: true)
+                    parentVC.dismiss(animated: true)
                 }
             })
             .disposed(by: disposeBag)
     }
+    
+    func alert(message: String) {
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { action in
+            print("action")
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
+    }
+}
+
+// MARK: - Network
+
+extension AuthCompleteViewController {
+    
 }
