@@ -13,6 +13,10 @@
 		92DD4FC22841F2AA0020CABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DD4FC02841F2AA0020CABF /* Main.storyboard */; };
 		92DD4FC42841F2AB0020CABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DD4FC32841F2AB0020CABF /* Assets.xcassets */; };
 		92DD4FC72841F2AB0020CABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DD4FC52841F2AB0020CABF /* LaunchScreen.storyboard */; };
+		92DD4FCF2841F3E70020CABF /* Todo.json in Resources */ = {isa = PBXBuildFile; fileRef = 92DD4FCE2841F3E70020CABF /* Todo.json */; };
+		92DD4FD12841F49D0020CABF /* MockParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4FD02841F49D0020CABF /* MockParser.swift */; };
+		92DD4FD32841F65F0020CABF /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4FD22841F65F0020CABF /* TodoManager.swift */; };
+		92DD4FD52841F6830020CABF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4FD42841F6830020CABF /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		92DD4FC32841F2AB0020CABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92DD4FC62841F2AB0020CABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92DD4FC82841F2AB0020CABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DD4FCE2841F3E70020CABF /* Todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Todo.json; sourceTree = "<group>"; };
+		92DD4FD02841F49D0020CABF /* MockParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParser.swift; sourceTree = "<group>"; };
+		92DD4FD22841F65F0020CABF /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		92DD4FD42841F6830020CABF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				92DD4FC32841F2AB0020CABF /* Assets.xcassets */,
 				92DD4FC52841F2AB0020CABF /* LaunchScreen.storyboard */,
 				92DD4FC82841F2AB0020CABF /* Info.plist */,
+				92DD4FCE2841F3E70020CABF /* Todo.json */,
+				92DD4FD02841F49D0020CABF /* MockParser.swift */,
+				92DD4FD22841F65F0020CABF /* TodoManager.swift */,
+				92DD4FD42841F6830020CABF /* Todo.swift */,
 			);
 			path = "7th-Seminar";
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 			files = (
 				92DD4FC72841F2AB0020CABF /* LaunchScreen.storyboard in Resources */,
 				92DD4FC42841F2AB0020CABF /* Assets.xcassets in Resources */,
+				92DD4FCF2841F3E70020CABF /* Todo.json in Resources */,
 				92DD4FC22841F2AA0020CABF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DD4FD32841F65F0020CABF /* TodoManager.swift in Sources */,
+				92DD4FD52841F6830020CABF /* Todo.swift in Sources */,
 				92DD4FBF2841F2AA0020CABF /* ViewController.swift in Sources */,
 				92DD4FBB2841F2AA0020CABF /* AppDelegate.swift in Sources */,
+				92DD4FD12841F49D0020CABF /* MockParser.swift in Sources */,
 				92DD4FBD2841F2AA0020CABF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
