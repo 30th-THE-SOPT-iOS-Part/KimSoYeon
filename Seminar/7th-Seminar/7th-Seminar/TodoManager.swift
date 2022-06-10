@@ -8,7 +8,6 @@
 import Foundation
 
 final class TodoManager {
-    // service code
     static let shared = TodoManager()
     private init() {}
 }

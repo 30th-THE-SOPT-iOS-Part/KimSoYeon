@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,14 +19,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setTableView()
+        setData()
+    }
+
+    private func setTableView() {
         tableView.dataSource = self
-        
+    }
+    
+    private func setData() {
         guard let data = MockParser.load([Todo].self, from: "Todo") else { return }
         print(data)
     }
-
-
 }
 
 extension ViewController: UITableViewDataSource {
