@@ -21,6 +21,16 @@
 		92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0328D2864D56700EDF368 /* APIConstant.swift */; };
 		92E032912864D5B000EDF368 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032902864D5B000EDF368 /* APIManager.swift */; };
 		92E032932864D60900EDF368 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032922864D60900EDF368 /* ImageViewController.swift */; };
+		92E0329A2864F85B00EDF368 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032992864F85B00EDF368 /* GenericResponse.swift */; };
+		92E0329C2864F8D900EDF368 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0329B2864F8D900EDF368 /* BaseTargetType.swift */; };
+		92E0329E2864F8F600EDF368 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0329D2864F8F600EDF368 /* NetworkResult.swift */; };
+		92E032A12864F93A00EDF368 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 92E032A02864F93A00EDF368 /* Moya */; };
+		92E032A32864F96000EDF368 /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032A22864F96000EDF368 /* MoyaLoggerPlugin.swift */; };
+		92E032A52864F98700EDF368 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032A42864F98700EDF368 /* GeneralAPI.swift */; };
+		92E032A82864F9E200EDF368 /* HealthMainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032A72864F9E200EDF368 /* HealthMainAPI.swift */; };
+		92E032AB2864FA0600EDF368 /* HealthMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AA2864FA0600EDF368 /* HealthMainService.swift */; };
+		92E032AD2864FA4A00EDF368 /* HealthMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */; };
+		92E032B02864FE0200EDF368 /* HealthMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +48,15 @@
 		92E0328D2864D56700EDF368 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		92E032902864D5B000EDF368 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		92E032922864D60900EDF368 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		92E032992864F85B00EDF368 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		92E0329B2864F8D900EDF368 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		92E0329D2864F8F600EDF368 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		92E032A22864F96000EDF368 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
+		92E032A42864F98700EDF368 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		92E032A72864F9E200EDF368 /* HealthMainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainAPI.swift; sourceTree = "<group>"; };
+		92E032AA2864FA0600EDF368 /* HealthMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainService.swift; sourceTree = "<group>"; };
+		92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainResponse.swift; sourceTree = "<group>"; };
+		92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +66,7 @@
 			files = (
 				92C1B8522863999100F97D75 /* SnapKit in Frameworks */,
 				92C1B855286399AD00F97D75 /* Then in Frameworks */,
+				92E032A12864F93A00EDF368 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +120,9 @@
 		9252E4432861A68700046B4A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				92E0328F2864D59C00EDF368 /* APIManager */,
-				92E0328C2864D54500EDF368 /* APIConstant */,
+				92E032A92864F9F800EDF368 /* Service */,
+				92E032A62864F9BF00EDF368 /* API */,
+				92E032982864F84E00EDF368 /* Base */,
 				92E032892864D4EB00EDF368 /* Model */,
 			);
 			path = Network;
@@ -146,9 +167,9 @@
 		9252E4482861A70600046B4A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				9252E4312860C11F00046B4A /* MainViewController.swift */,
-				92E032872863B15000EDF368 /* PhotoViewController.swift */,
-				92E032922864D60900EDF368 /* ImageViewController.swift */,
+				92E032AE2864FDF700EDF368 /* Health */,
+				92E032952864F73D00EDF368 /* Image */,
+				92E032942864F73000EDF368 /* Photo */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -164,25 +185,81 @@
 		92E032892864D4EB00EDF368 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92E0328A2864D4FE00EDF368 /* Photo.swift */,
+				92E032972864F74F00EDF368 /* Health */,
+				92E032962864F74800EDF368 /* Photo */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		92E0328C2864D54500EDF368 /* APIConstant */ = {
+		92E032942864F73000EDF368 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				9252E4312860C11F00046B4A /* MainViewController.swift */,
+				92E032872863B15000EDF368 /* PhotoViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		92E032952864F73D00EDF368 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				92E032922864D60900EDF368 /* ImageViewController.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		92E032962864F74800EDF368 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				92E0328A2864D4FE00EDF368 /* Photo.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		92E032972864F74F00EDF368 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		92E032982864F84E00EDF368 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				92E0328D2864D56700EDF368 /* APIConstant.swift */,
+				92E032992864F85B00EDF368 /* GenericResponse.swift */,
+				92E0329B2864F8D900EDF368 /* BaseTargetType.swift */,
+				92E0329D2864F8F600EDF368 /* NetworkResult.swift */,
+				92E032A22864F96000EDF368 /* MoyaLoggerPlugin.swift */,
+				92E032A42864F98700EDF368 /* GeneralAPI.swift */,
 			);
-			path = APIConstant;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		92E0328F2864D59C00EDF368 /* APIManager */ = {
+		92E032A62864F9BF00EDF368 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				92E032902864D5B000EDF368 /* APIManager.swift */,
+				92E032A72864F9E200EDF368 /* HealthMainAPI.swift */,
 			);
-			path = APIManager;
+			path = API;
+			sourceTree = "<group>";
+		};
+		92E032A92864F9F800EDF368 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				92E032AA2864FA0600EDF368 /* HealthMainService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		92E032AE2864FDF700EDF368 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */,
+			);
+			path = Health;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +281,7 @@
 			packageProductDependencies = (
 				92C1B8512863999100F97D75 /* SnapKit */,
 				92C1B854286399AD00F97D75 /* Then */,
+				92E032A02864F93A00EDF368 /* Moya */,
 			);
 			productName = "AppJam-Practice";
 			productReference = 9252E42A2860C11F00046B4A /* AppJam-Practice.app */;
@@ -236,6 +314,7 @@
 			packageReferences = (
 				92C1B8502863999100F97D75 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				92C1B853286399AD00F97D75 /* XCRemoteSwiftPackageReference "Then" */,
+				92E0329F2864F93A00EDF368 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 9252E42B2860C11F00046B4A /* Products */;
 			projectDirPath = "";
@@ -267,11 +346,20 @@
 				92E032912864D5B000EDF368 /* APIManager.swift in Sources */,
 				92E032932864D60900EDF368 /* ImageViewController.swift in Sources */,
 				92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */,
+				92E0329E2864F8F600EDF368 /* NetworkResult.swift in Sources */,
+				92E032A32864F96000EDF368 /* MoyaLoggerPlugin.swift in Sources */,
+				92E032A52864F98700EDF368 /* GeneralAPI.swift in Sources */,
+				92E032A82864F9E200EDF368 /* HealthMainAPI.swift in Sources */,
+				92E032AD2864FA4A00EDF368 /* HealthMainResponse.swift in Sources */,
 				92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */,
+				92E0329C2864F8D900EDF368 /* BaseTargetType.swift in Sources */,
 				9252E4322860C11F00046B4A /* MainViewController.swift in Sources */,
+				92E032B02864FE0200EDF368 /* HealthMainViewController.swift in Sources */,
+				92E0329A2864F85B00EDF368 /* GenericResponse.swift in Sources */,
 				9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */,
 				9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */,
 				92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */,
+				92E032AB2864FA0600EDF368 /* HealthMainService.swift in Sources */,
 				92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +596,14 @@
 				kind = branch;
 			};
 		};
+		92E0329F2864F93A00EDF368 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -520,6 +616,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92C1B853286399AD00F97D75 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		92E032A02864F93A00EDF368 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92E0329F2864F93A00EDF368 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
