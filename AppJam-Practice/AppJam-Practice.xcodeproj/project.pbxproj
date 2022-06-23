@@ -15,6 +15,8 @@
 		9252E43A2860C12100046B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9252E4382860C12100046B4A /* LaunchScreen.storyboard */; };
 		92C1B8522863999100F97D75 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92C1B8512863999100F97D75 /* SnapKit */; };
 		92C1B855286399AD00F97D75 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92C1B854286399AD00F97D75 /* Then */; };
+		92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032832863AADC00EDF368 /* PHAsset+.swift */; };
+		92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032872863B15000EDF368 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9252E4362860C12100046B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9252E4392860C12100046B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9252E43B2860C12100046B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E032832863AADC00EDF368 /* PHAsset+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+.swift"; sourceTree = "<group>"; };
+		92E032872863B15000EDF368 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		9252E4442861A68D00046B4A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				92E032822863AAC300EDF368 /* Extension */,
 				9252E4452861A69600046B4A /* Support */,
 			);
 			path = Global;
@@ -131,8 +136,17 @@
 			isa = PBXGroup;
 			children = (
 				9252E4312860C11F00046B4A /* MainViewController.swift */,
+				92E032872863B15000EDF368 /* PhotoViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		92E032822863AAC300EDF368 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92E032832863AADC00EDF368 /* PHAsset+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */,
 				9252E4322860C11F00046B4A /* MainViewController.swift in Sources */,
 				9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */,
 				9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */,
+				92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

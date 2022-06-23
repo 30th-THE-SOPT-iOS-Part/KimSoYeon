@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,6 +32,12 @@
                                     <action selector="touchUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MgX-Ju-wcp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4l-d3-4o9">
+                                <rect key="frame" x="186" y="218" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,15 +46,78 @@
                             <constraint firstItem="hcs-q3-ye9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LpI-le-bc6"/>
                             <constraint firstItem="f3j-aH-eyw" firstAttribute="top" secondItem="hcs-q3-ye9" secondAttribute="bottom" constant="20" id="jWe-Yt-pyN"/>
                             <constraint firstItem="hcs-q3-ye9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="210" id="jiH-gO-Kiq"/>
+                            <constraint firstItem="l4l-d3-4o9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="leK-rQ-Mly"/>
+                            <constraint firstItem="hcs-q3-ye9" firstAttribute="top" secondItem="l4l-d3-4o9" secondAttribute="bottom" constant="15" id="nlb-yi-omF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="l4l-d3-4o9" id="wfj-B9-LID"/>
                         <outlet property="imageView" destination="hcs-q3-ye9" id="lF1-Zm-67x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="6LB-xJ-sWk">
+            <objects>
+                <viewController id="0wz-1G-1BT" customClass="PhotoViewController" customModule="AppJam_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="czu-hY-RUN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qyI-cA-mBj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eN6-Bz-eZL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AssetsCollectionViewCell" id="Hla-DU-X23" customClass="AssetsCollectionViewCell" customModule="AppJam_Practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1eQ-mQ-9qb">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uZs-2R-R5Z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uZs-2R-R5Z" firstAttribute="top" secondItem="1eQ-mQ-9qb" secondAttribute="top" id="FyY-WQ-jy2"/>
+                                                <constraint firstItem="uZs-2R-R5Z" firstAttribute="leading" secondItem="1eQ-mQ-9qb" secondAttribute="leading" id="NHb-tw-UPa"/>
+                                                <constraint firstAttribute="trailing" secondItem="uZs-2R-R5Z" secondAttribute="trailing" id="NKH-MW-hIn"/>
+                                                <constraint firstAttribute="bottom" secondItem="uZs-2R-R5Z" secondAttribute="bottom" id="aeZ-0z-jDq"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="assetImageView" destination="uZs-2R-R5Z" id="7Zn-kE-rJA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lpi-td-qsw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qyI-cA-mBj" firstAttribute="leading" secondItem="Lpi-td-qsw" secondAttribute="leading" id="Lcm-T4-nWS"/>
+                            <constraint firstItem="Lpi-td-qsw" firstAttribute="bottom" secondItem="qyI-cA-mBj" secondAttribute="bottom" id="hLL-gm-fEs"/>
+                            <constraint firstItem="qyI-cA-mBj" firstAttribute="top" secondItem="Lpi-td-qsw" secondAttribute="top" id="kpy-mK-dKY"/>
+                            <constraint firstItem="Lpi-td-qsw" firstAttribute="trailing" secondItem="qyI-cA-mBj" secondAttribute="trailing" id="ubH-oa-YbV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qyI-cA-mBj" id="Nle-L6-ak1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvc-tW-mOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="805"/>
         </scene>
     </scenes>
     <resources>
