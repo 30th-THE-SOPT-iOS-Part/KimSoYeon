@@ -16,8 +16,6 @@ final class HealthMainAPI {
     
     public private(set) var healthData: GenericResponse<HealthResponse>?
     
-    // MARK: - POST 소셜로그인
-    
     public func getHealthMainData(completion: @escaping ((GenericResponse<HealthResponse>?, Int?) -> ())) {
         healthProvider.request(.health) { result in
             switch result {

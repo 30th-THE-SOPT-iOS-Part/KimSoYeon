@@ -31,6 +31,10 @@
 		92E032AB2864FA0600EDF368 /* HealthMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AA2864FA0600EDF368 /* HealthMainService.swift */; };
 		92E032AD2864FA4A00EDF368 /* HealthMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */; };
 		92E032B02864FE0200EDF368 /* HealthMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */; };
+		92E032B22865043D00EDF368 /* HealthWeightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032B12865043D00EDF368 /* HealthWeightRequest.swift */; };
+		92E032B6286504B200EDF368 /* HealthWeightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032B5286504B200EDF368 /* HealthWeightResponse.swift */; };
+		92E032B82865050800EDF368 /* HealthWeigthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032B72865050800EDF368 /* HealthWeigthService.swift */; };
+		92E032BA286506C400EDF368 /* HealthWeightAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032B9286506C400EDF368 /* HealthWeightAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		92E032AA2864FA0600EDF368 /* HealthMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainService.swift; sourceTree = "<group>"; };
 		92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainResponse.swift; sourceTree = "<group>"; };
 		92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMainViewController.swift; sourceTree = "<group>"; };
+		92E032B12865043D00EDF368 /* HealthWeightRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWeightRequest.swift; sourceTree = "<group>"; };
+		92E032B5286504B200EDF368 /* HealthWeightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWeightResponse.swift; sourceTree = "<group>"; };
+		92E032B72865050800EDF368 /* HealthWeigthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWeigthService.swift; sourceTree = "<group>"; };
+		92E032B9286506C400EDF368 /* HealthWeightAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWeightAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +227,8 @@
 		92E032972864F74F00EDF368 /* Health */ = {
 			isa = PBXGroup;
 			children = (
-				92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */,
+				92E032B4286504A200EDF368 /* Weight */,
+				92E032B32865049700EDF368 /* Main */,
 			);
 			path = Health;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			children = (
 				92E032902864D5B000EDF368 /* APIManager.swift */,
 				92E032A72864F9E200EDF368 /* HealthMainAPI.swift */,
+				92E032B9286506C400EDF368 /* HealthWeightAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				92E032AA2864FA0600EDF368 /* HealthMainService.swift */,
+				92E032B72865050800EDF368 /* HealthWeigthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -260,6 +271,23 @@
 				92E032AF2864FE0200EDF368 /* HealthMainViewController.swift */,
 			);
 			path = Health;
+			sourceTree = "<group>";
+		};
+		92E032B32865049700EDF368 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				92E032AC2864FA4A00EDF368 /* HealthMainResponse.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		92E032B4286504A200EDF368 /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				92E032B12865043D00EDF368 /* HealthWeightRequest.swift */,
+				92E032B5286504B200EDF368 /* HealthWeightResponse.swift */,
+			);
+			path = Weight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +374,8 @@
 				92E032912864D5B000EDF368 /* APIManager.swift in Sources */,
 				92E032932864D60900EDF368 /* ImageViewController.swift in Sources */,
 				92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */,
+				92E032B82865050800EDF368 /* HealthWeigthService.swift in Sources */,
+				92E032BA286506C400EDF368 /* HealthWeightAPI.swift in Sources */,
 				92E0329E2864F8F600EDF368 /* NetworkResult.swift in Sources */,
 				92E032A32864F96000EDF368 /* MoyaLoggerPlugin.swift in Sources */,
 				92E032A52864F98700EDF368 /* GeneralAPI.swift in Sources */,
@@ -359,7 +389,9 @@
 				9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */,
 				9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */,
 				92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */,
+				92E032B22865043D00EDF368 /* HealthWeightRequest.swift in Sources */,
 				92E032AB2864FA0600EDF368 /* HealthMainService.swift in Sources */,
+				92E032B6286504B200EDF368 /* HealthWeightResponse.swift in Sources */,
 				92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
