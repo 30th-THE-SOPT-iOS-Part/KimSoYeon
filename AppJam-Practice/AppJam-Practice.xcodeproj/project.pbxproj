@@ -17,6 +17,10 @@
 		92C1B855286399AD00F97D75 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92C1B854286399AD00F97D75 /* Then */; };
 		92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032832863AADC00EDF368 /* PHAsset+.swift */; };
 		92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032872863B15000EDF368 /* PhotoViewController.swift */; };
+		92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0328A2864D4FE00EDF368 /* Photo.swift */; };
+		92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0328D2864D56700EDF368 /* APIConstant.swift */; };
+		92E032912864D5B000EDF368 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032902864D5B000EDF368 /* APIManager.swift */; };
+		92E032932864D60900EDF368 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032922864D60900EDF368 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		9252E43B2860C12100046B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E032832863AADC00EDF368 /* PHAsset+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+.swift"; sourceTree = "<group>"; };
 		92E032872863B15000EDF368 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		92E0328A2864D4FE00EDF368 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		92E0328D2864D56700EDF368 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		92E032902864D5B000EDF368 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		92E032922864D60900EDF368 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,9 @@
 		9252E4432861A68700046B4A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				92E0328F2864D59C00EDF368 /* APIManager */,
+				92E0328C2864D54500EDF368 /* APIConstant */,
+				92E032892864D4EB00EDF368 /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 			children = (
 				9252E4312860C11F00046B4A /* MainViewController.swift */,
 				92E032872863B15000EDF368 /* PhotoViewController.swift */,
+				92E032922864D60900EDF368 /* ImageViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -147,6 +159,30 @@
 				92E032832863AADC00EDF368 /* PHAsset+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		92E032892864D4EB00EDF368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92E0328A2864D4FE00EDF368 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92E0328C2864D54500EDF368 /* APIConstant */ = {
+			isa = PBXGroup;
+			children = (
+				92E0328D2864D56700EDF368 /* APIConstant.swift */,
+			);
+			path = APIConstant;
+			sourceTree = "<group>";
+		};
+		92E0328F2864D59C00EDF368 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				92E032902864D5B000EDF368 /* APIManager.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E032912864D5B000EDF368 /* APIManager.swift in Sources */,
+				92E032932864D60900EDF368 /* ImageViewController.swift in Sources */,
+				92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */,
 				92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */,
 				9252E4322860C11F00046B4A /* MainViewController.swift in Sources */,
 				9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */,
 				9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */,
+				92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */,
 				92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
