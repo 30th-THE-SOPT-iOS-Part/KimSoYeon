@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9252AC1C28662FCD00145862 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252AC1B28662FCD00145862 /* AnimationViewController.swift */; };
+		9252AC1E2866305600145862 /* CountScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252AC1D2866305600145862 /* CountScrollLabel.swift */; };
 		9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252E42D2860C11F00046B4A /* AppDelegate.swift */; };
 		9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252E42F2860C11F00046B4A /* SceneDelegate.swift */; };
 		9252E4322860C11F00046B4A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252E4312860C11F00046B4A /* MainViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9252AC1B28662FCD00145862 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		9252AC1D2866305600145862 /* CountScrollLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountScrollLabel.swift; sourceTree = "<group>"; };
 		9252E42A2860C11F00046B4A /* AppJam-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppJam-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9252E42D2860C11F00046B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9252E42F2860C11F00046B4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9252AC1A28662FB400145862 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				9252AC1B28662FCD00145862 /* AnimationViewController.swift */,
+				9252AC1D2866305600145862 /* CountScrollLabel.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		9252E4212860C11F00046B4A = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +188,7 @@
 		9252E4482861A70600046B4A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9252AC1A28662FB400145862 /* Animation */,
 				92E032AE2864FDF700EDF368 /* Health */,
 				92E032952864F73D00EDF368 /* Image */,
 				92E032942864F73000EDF368 /* Photo */,
@@ -380,9 +394,11 @@
 				92E032A32864F96000EDF368 /* MoyaLoggerPlugin.swift in Sources */,
 				92E032A52864F98700EDF368 /* GeneralAPI.swift in Sources */,
 				92E032A82864F9E200EDF368 /* HealthMainAPI.swift in Sources */,
+				9252AC1E2866305600145862 /* CountScrollLabel.swift in Sources */,
 				92E032AD2864FA4A00EDF368 /* HealthMainResponse.swift in Sources */,
 				92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */,
 				92E0329C2864F8D900EDF368 /* BaseTargetType.swift in Sources */,
+				9252AC1C28662FCD00145862 /* AnimationViewController.swift in Sources */,
 				9252E4322860C11F00046B4A /* MainViewController.swift in Sources */,
 				92E032B02864FE0200EDF368 /* HealthMainViewController.swift in Sources */,
 				92E0329A2864F85B00EDF368 /* GenericResponse.swift in Sources */,
