@@ -49,9 +49,8 @@ class CountScrollLabel: UILabel {
     
     // 각각의 레이블의 스크롤레이어에 스크롤될 콘텐츠 레이블추가
     private func makeScrollContent(num: Int, scrollLayer: CAScrollLayer) {
+        var numSet: [Int] = []
         
-        // MARK: - TODO: 여기 고칠 것
-        var numSet: [Int] = [1]
         for i in num...num+10 {
             let contentNum = i > 9 ? i % 10 : i
             numSet.append(contentNum)
@@ -93,5 +92,4 @@ class CountScrollLabel: UILabel {
             offset += 0.4
         }
     }
-    
 }

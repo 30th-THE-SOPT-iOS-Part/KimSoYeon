@@ -6,15 +6,25 @@
 //
 
 import UIKit
+
 import Photos
 import PhotosUI
 
+import SnapKit
 import Then
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
+    
+    private var countDownLabel = CountScrollLabel()
+    
+    private lazy var button = UIButton().then {
+        $0.setTitle("버튼", for: .normal)
+        $0.setTitleColor(.blue, for: .normal)
+        $0.addTarget(self, action: #selector(touchUpCountDownButton), for: .touchUpInside)
+    }
     
     private let dateFormatter = DateFormatter().then {
         $0.locale = Locale(identifier: "ko_kr")
@@ -24,6 +34,21 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(countDownLabel)
+        view.addSubview(button)
+        
+        countDownLabel.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(80)
+            $0.centerX.equalToSuperview()
+        }
+        
+        button.snp.makeConstraints {
+            $0.top.equalTo(countDownLabel.snp.bottom).offset(10)
+            $0.centerX.equalToSuperview()
+        }
+        
+        countDownLabel.config(num: "2017", duration: 0.5)
     }
     
     @IBAction func touchUpButton(_ sender: Any) {
@@ -32,7 +57,6 @@ class MainViewController: UIViewController {
         } else {
             openGallery()
         }
-        
     }
     
     private func pickImage() {
@@ -50,6 +74,12 @@ class MainViewController: UIViewController {
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true)
+    }
+    
+    // MARK: - @objc
+    
+    @objc func touchUpCountDownButton() {
+        countDownLabel.animate(ascending: true)
     }
 }
 

@@ -17,6 +17,8 @@
 		9252E43A2860C12100046B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9252E4382860C12100046B4A /* LaunchScreen.storyboard */; };
 		92C1B8522863999100F97D75 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92C1B8512863999100F97D75 /* SnapKit */; };
 		92C1B855286399AD00F97D75 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92C1B854286399AD00F97D75 /* Then */; };
+		92CA51F1286B71C500794BBB /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA51F0286B71C500794BBB /* CountingLabel.swift */; };
+		92CA51F3286B780100794BBB /* CountingAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA51F2286B780100794BBB /* CountingAnimationViewController.swift */; };
 		92E032842863AADC00EDF368 /* PHAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032832863AADC00EDF368 /* PHAsset+.swift */; };
 		92E032882863B15000EDF368 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E032872863B15000EDF368 /* PhotoViewController.swift */; };
 		92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0328A2864D4FE00EDF368 /* Photo.swift */; };
@@ -50,6 +52,8 @@
 		9252E4362860C12100046B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9252E4392860C12100046B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9252E43B2860C12100046B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92CA51F0286B71C500794BBB /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
+		92CA51F2286B780100794BBB /* CountingAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingAnimationViewController.swift; sourceTree = "<group>"; };
 		92E032832863AADC00EDF368 /* PHAsset+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+.swift"; sourceTree = "<group>"; };
 		92E032872863B15000EDF368 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92E0328A2864D4FE00EDF368 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			children = (
 				9252AC1B28662FCD00145862 /* AnimationViewController.swift */,
 				9252AC1D2866305600145862 /* CountScrollLabel.swift */,
+				92CA51F0286B71C500794BBB /* CountingLabel.swift */,
+				92CA51F2286B780100794BBB /* CountingAnimationViewController.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CA51F3286B780100794BBB /* CountingAnimationViewController.swift in Sources */,
 				92E032912864D5B000EDF368 /* APIManager.swift in Sources */,
 				92E032932864D60900EDF368 /* ImageViewController.swift in Sources */,
 				92E0328B2864D4FE00EDF368 /* Photo.swift in Sources */,
@@ -405,6 +412,7 @@
 				9252E42E2860C11F00046B4A /* AppDelegate.swift in Sources */,
 				9252E4302860C11F00046B4A /* SceneDelegate.swift in Sources */,
 				92E0328E2864D56700EDF368 /* APIConstant.swift in Sources */,
+				92CA51F1286B71C500794BBB /* CountingLabel.swift in Sources */,
 				92E032B22865043D00EDF368 /* HealthWeightRequest.swift in Sources */,
 				92E032AB2864FA0600EDF368 /* HealthMainService.swift in Sources */,
 				92E032B6286504B200EDF368 /* HealthWeightResponse.swift in Sources */,
