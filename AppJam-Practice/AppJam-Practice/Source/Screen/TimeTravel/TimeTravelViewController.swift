@@ -28,6 +28,24 @@ final class TimeTravelViewController: UIViewController {
                                    y: 0,
                                    blur: 10,
                                    spread: 0)
+        $0.isHidden = true
+    }
+    
+    private lazy var dateTextField = UITextField().then {
+        $0.placeholder = "2022.09.30"
+        $0.inputView = datePickerView
+    }
+    
+    private var datePickerView = UIDatePicker().then {
+        $0.preferredDatePickerStyle = .wheels
+        $0.datePickerMode = .date
+        $0.locale = Locale(identifier: "ko")
+        
+        let date = Date()
+        $0.maximumDate = date
+        
+        let minimumDate = Calendar.current.date(byAdding: .year, value: -22, to: date)
+        $0.minimumDate = minimumDate
     }
     
     // MARK: - UI Property
@@ -49,11 +67,18 @@ final class TimeTravelViewController: UIViewController {
     
     private func setLayout() {
         view.addSubview(nextButton)
+        view.addSubview(dateTextField)
         
         nextButton.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(30)
             $0.width.equalTo(170)
             $0.height.equalTo(48)
+        }
+        
+        dateTextField.snp.makeConstraints {
+            $0.top.equalTo(nextButton.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.height.equalTo(50)
         }
     }
     
